@@ -16,11 +16,16 @@ wrapper {
 }
 
 
+header,
 footer {
     width: 100%;
     position: absolute;
     bottom: 0;
     z-index: 1000;
+}
+
+header {
+    top: 0;
 }
 
 .btn {
@@ -73,9 +78,11 @@ footer {
 
 .logo-img {
     position: relative;
-    margin: 0 auto;
+    margin: 20% auto;
     display: block;
     z-index: 100;
+    width: 18%;
+    mix-blend-mode: difference;
 }
 
 .test {
