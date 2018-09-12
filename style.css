@@ -29,11 +29,19 @@ header {
 }
 
 .btn {
-    border: 1px solid #d8d8d8;
+
     background: #292929;
     padding: 1rem;
     color: #fff;
     display: inline-block;
+}
+
+.btn.borderTop {
+    border-top: 1px solid #d8d8d8;
+}
+
+.btn.borderBootom {
+    border-bottom: 1px solid #d8d8d8;
 }
 
 .icon {
