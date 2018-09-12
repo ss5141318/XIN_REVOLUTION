@@ -71,6 +71,18 @@ footer {
     z-index: 100;
 }
 
+.logo-img {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    z-index: 100;
+}
+
+.test {
+    position: absolute;
+    width: 100%;
+}
+
 .moon {
     background: url(img/moon.png) no-repeat;
     background-size: contain;
