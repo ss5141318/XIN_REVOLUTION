@@ -25,15 +25,18 @@ wrapper {
 header,
 footer {
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    position: absolute; 
     z-index: 1000;
 }
 
 header {
-    top: 0;
-    background: $black;
+    top: 0;  
     height: 20px;
+}
+footer{   
+    bottom: 0;
+    height: 20px;
+    background: $black;
 }
 
 .biseau {
@@ -69,9 +72,13 @@ header {
     }
 }
 
-
+// 梯形按鈕
 .btn {
-    width: 6rem;
+    /*--- 變數 ---*/
+    $width:8rem;
+    $angle:40px;
+    /*-----------*/
+    width: $width;
     background: $black;
     color: #fff;
     display: inline-block;
@@ -101,25 +108,25 @@ header {
 
     &.leftTop {
         &:after {
-            @include biseauMixin(20px, auto, auto, 6rem, 0 0 20px 20px, transparent transparent transparent $black)
+            @include biseauMixin(20px, auto, auto, $width, 0 0 $angle $angle, transparent transparent transparent $black)
         }
     }
 
     &.rightTop {
         &:before {
           
-            @include biseauMixin(20px, 6rem, auto, auto, 0 20px 20px 0, transparent $black transparent transparent)
+            @include biseauMixin(20px, $width, auto, auto, 0 $angle $angle 0, transparent $black transparent transparent)
         }
     }
 
     &.leftBottom {
         &:after {
            
-            @include biseauMixin(auto, auto, 0, 6rem, 0 40px 40px 0, transparent transparent $black transparent )
+            @include biseauMixin(auto, auto, 0, $width, 0 $angle $angle 0, transparent transparent $black transparent )
         }     
     } &.rightBottom {
         &:before {
-            @include biseauMixin(auto, 6rem, 0, auto, 40px 40px 0  0, transparent $black transparent transparent)
+            @include biseauMixin(auto, $width, 0, auto, $angle $angle 0  0, transparent $black transparent transparent)
         }
     }
    
