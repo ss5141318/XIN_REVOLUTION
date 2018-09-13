@@ -1,3 +1,5 @@
+$black:#292929;
+
 body {
     background: #d8d8d8;
 }
@@ -26,7 +28,7 @@ footer {
 
 header {
     top: 0;
-    background: #292929;
+    background: $black;
     height: 20px;
 }
 
@@ -38,7 +40,7 @@ header {
     top: 20px;
     left: 50%;
     margin-left: -129px;
-    background: #292929;
+    background: $black;
     &:before, &:after {
         content: "";
         position: absolute;
@@ -50,44 +52,52 @@ header {
     &:before{
         left: -21px;
         border-width: 0 21px 21px 0;
-        border-color: transparent #292929 transparent transparent;
+        border-color: transparent $black transparent transparent;
     }
     &:after{
         right: -21px;
         border-width: 0 0 21px 21px;
-        border-color: transparent transparent transparent #292929;
+        border-color: transparent transparent transparent $black;
     }
 }
 
 
 
-.biseau:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -21px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 21px 21px;
-    border-color: transparent transparent transparent #292929;
-}
 
 .btn {
-
-    background: #292929;
-    padding: 1rem;
+width: 4rem;
+    background: $black;
     color: #fff;
     display: inline-block;
+    line-height: 20px;
+    padding: 10px;
+
+//     &.borderTop {
+//         border-top: 1px solid #d8d8d8;
+//     }
+//    &.borderBottom {
+//         border-bottom: 1px solid #d8d8d8;
+//     }
+
+    &.LeftTop{
+         &:after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        &:after{
+            left: calc(4rem + 20px);
+        border-width: 0 0 21px 21px;
+        border-color: transparent transparent transparent $black;
+        }
+    }
 }
 
-.btn.borderTop {
-    border-top: 1px solid #d8d8d8;
-}
 
-.btn.borderBottom {
-    border-bottom: 1px solid #d8d8d8;
-}
+
 
 .icon {
     display: inline-block;
