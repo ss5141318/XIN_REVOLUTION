@@ -107,10 +107,10 @@ header {
   content: '';
   top: auto;
   right: auto;
-  bottom: 20px;
+  bottom: 0;
   left: 6rem;
-  border-width: 0 0 20px 20px;
-  border-color: transparent transparent transparent #292929;
+  border-width: 0 40px 40px 0;
+  border-color: transparent transparent #292929 transparent;
   position: absolute;
   width: 0;
   height: 0;
@@ -121,9 +121,9 @@ header {
   content: '';
   top: auto;
   right: 6rem;
-  bottom: 20px;
+  bottom: 0;
   left: auto;
-  border-width: 0 20px 20px 0;
+  border-width: 40px 40px 0 0;
   border-color: transparent #292929 transparent transparent;
   position: absolute;
   width: 0;

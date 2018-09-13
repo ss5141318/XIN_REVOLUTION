@@ -115,11 +115,11 @@ header {
     &.leftBottom {
         &:after {
            
-            @include biseauMixin(auto, auto, 20px, 6rem, 0 0 20px 20px, transparent transparent transparent $black)
+            @include biseauMixin(auto, auto, 0, 6rem, 0 40px 40px 0, transparent transparent $black transparent )
         }     
     } &.rightBottom {
         &:before {
-            @include biseauMixin(auto, 6rem, 20px, auto, 0 20px 20px 0, transparent $black transparent transparent)
+            @include biseauMixin(auto, 6rem, 0, auto, 40px 40px 0  0, transparent $black transparent transparent)
         }
     }
    
