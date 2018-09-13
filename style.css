@@ -8,21 +8,21 @@ body {
   background: #d8d8d8;
 }
 
-html,
-body {
+body,
+html {
   overflow: hidden;
   margin: 0;
 }
 
-html,
 body,
+html,
 wrapper {
   width: 100%;
   height: 100%;
 }
 
-header,
-footer {
+footer,
+header {
   width: 100%;
   position: absolute;
   z-index: 1000;
@@ -37,7 +37,13 @@ footer {
 }
 
 .footerDiv {
+  position: absolute;
   height: 20px;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 300px);
+  margin: 0 auto;
+  right: 0;
   background: #292929;
 }
 
@@ -52,7 +58,7 @@ footer {
   background: #292929;
 }
 
-.biseau:before, .biseau:after {
+.biseau:after, .biseau:before {
   content: "";
   position: absolute;
   top: 0;
@@ -168,7 +174,7 @@ footer {
 }
 
 .logo {
-  background: url(img/logo.svg) no-repeat;
+  background: url("img/logo.svg") no-repeat;
   background-size: 100%;
   width: 14rem;
   height: 5rem;
@@ -194,7 +200,7 @@ footer {
 }
 
 .moon {
-  background: url(img/moon.png) no-repeat;
+  background: url("img/moon.png") no-repeat;
   background-size: contain;
   width: 100%;
   height: 60rem;
@@ -206,7 +212,7 @@ footer {
 }
 
 .wing {
-  background: url(img/wing.png) no-repeat;
+  background: url("img/wing.png") no-repeat;
   background-size: contain;
   position: absolute;
   z-index: 3;
@@ -227,7 +233,7 @@ footer {
   content: "";
   clear: both;
   display: block;
-  background: url(img/screen.png) center center repeat;
+  background: url("img/screen.png") center center repeat;
   -ms-background-size: 3px 3px;
   background-size: 3px 3px;
   z-index: 3;
