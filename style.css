@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background: #d8d8d8;
 }
@@ -33,7 +38,7 @@ header {
   position: absolute;
   z-index: 10;
   width: 258px;
-  height: 21px;
+  height: 20px;
   top: 20px;
   left: 50%;
   margin-left: -129px;
@@ -50,19 +55,19 @@ header {
 }
 
 .biseau:before {
-  left: -21px;
-  border-width: 0 21px 21px 0;
+  left: -20px;
+  border-width: 0 20px 20px 0;
   border-color: transparent #292929 transparent transparent;
 }
 
 .biseau:after {
-  right: -21px;
-  border-width: 0 0 21px 21px;
+  right: -20px;
+  border-width: 0 0 20px 20px;
   border-color: transparent transparent transparent #292929;
 }
 
 .btn {
-  width: 4rem;
+  width: 6rem;
   background: #292929;
   color: #fff;
   display: inline-block;
@@ -70,19 +75,60 @@ header {
   padding: 10px;
 }
 
-.btn.LeftTop:after {
-  content: "";
-  position: absolute;
+.btn.leftTop:after {
+  content: '';
   top: 20px;
+  right: auto;
+  bottom: auto;
+  left: 6rem;
+  border-width: 0 0 20px 20px;
+  border-color: transparent transparent transparent #292929;
+  position: absolute;
   width: 0;
   height: 0;
   border-style: solid;
 }
 
-.btn.LeftTop:after {
-  left: calc(4rem + 20px);
-  border-width: 0 0 21px 21px;
+.btn.rightTop:before {
+  content: '';
+  top: 20px;
+  right: 6rem;
+  bottom: auto;
+  left: auto;
+  border-width: 0 20px 20px 0;
+  border-color: transparent #292929 transparent transparent;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.btn.leftBottom:after {
+  content: '';
+  top: auto;
+  right: auto;
+  bottom: 20px;
+  left: 6rem;
+  border-width: 0 0 20px 20px;
   border-color: transparent transparent transparent #292929;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.btn.rightBottom:before {
+  content: '';
+  top: auto;
+  right: 6rem;
+  bottom: 20px;
+  left: auto;
+  border-width: 0 20px 20px 0;
+  border-color: transparent #292929 transparent transparent;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
 }
 
 .icon {

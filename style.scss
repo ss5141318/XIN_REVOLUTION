@@ -1,5 +1,9 @@
 $black:#292929;
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: #d8d8d8;
 }
@@ -36,12 +40,14 @@ header {
     position: absolute;
     z-index: 10;
     width: 258px;
-    height: 21px;
+    height: 20px;
     top: 20px;
     left: 50%;
     margin-left: -129px;
     background: $black;
-    &:before, &:after {
+
+    &:before,
+    &:after {
         content: "";
         position: absolute;
         top: 0;
@@ -49,52 +55,76 @@ header {
         height: 0;
         border-style: solid;
     }
-    &:before{
-        left: -21px;
-        border-width: 0 21px 21px 0;
+
+    &:before {
+        left: -20px;
+        border-width: 0 20px 20px 0;
         border-color: transparent $black transparent transparent;
     }
-    &:after{
-        right: -21px;
-        border-width: 0 0 21px 21px;
+
+    &:after {
+        right: -20px;
+        border-width: 0 0 20px 20px;
         border-color: transparent transparent transparent $black;
     }
 }
 
 
-
-
 .btn {
-width: 4rem;
+    width: 6rem;
     background: $black;
     color: #fff;
     display: inline-block;
     line-height: 20px;
     padding: 10px;
 
-//     &.borderTop {
-//         border-top: 1px solid #d8d8d8;
-//     }
-//    &.borderBottom {
-//         border-bottom: 1px solid #d8d8d8;
-//     }
+    //     &.borderTop {
+    //         border-top: 1px solid #d8d8d8;
+    //     }
+    //    &.borderBottom {
+    //         border-bottom: 1px solid #d8d8d8;
+    //     }
 
-    &.LeftTop{
-         &:after {
-            content: "";
-            position: absolute;
-            top: 20px;
-            width: 0;
-            height: 0;
-            border-style: solid;
-        }
-        &:after{
-            left: calc(4rem + 20px);
-        border-width: 0 0 21px 21px;
-        border-color: transparent transparent transparent $black;
+    @mixin biseauMixin($top:auto, $right:auto, $bottom:auto, $left:auto, $border-width:0 0 0 0, $border-color:transparent) {
+        content: '';
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+        border-width: $border-width;
+        border-color: $border-color;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;   
+    }
+
+    &.leftTop {
+        &:after {
+            @include biseauMixin(20px, auto, auto, 6rem, 0 0 20px 20px, transparent transparent transparent $black)
         }
     }
+
+    &.rightTop {
+        &:before {
+          
+            @include biseauMixin(20px, 6rem, auto, auto, 0 20px 20px 0, transparent $black transparent transparent)
+        }
+    }
+
+    &.leftBottom {
+        &:after {
+           
+            @include biseauMixin(auto, auto, 20px, 6rem, 0 0 20px 20px, transparent transparent transparent $black)
+        }     
+    } &.rightBottom {
+        &:before {
+            @include biseauMixin(auto, 6rem, 20px, auto, 0 20px 20px 0, transparent $black transparent transparent)
+        }
+    }
+   
 }
+
 
 
 
