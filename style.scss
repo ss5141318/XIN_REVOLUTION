@@ -1,4 +1,4 @@
-$black:#292929;
+$black: #292929;
 
 * {
     box-sizing: border-box;
@@ -8,37 +8,38 @@ body {
     background: #d8d8d8;
 }
 
-html,
-body {
+body,
+html {
     overflow: hidden;
     margin: 0;
 }
 
-html,
 body,
+html,
 wrapper {
     width: 100%;
     height: 100%;
 }
 
-
-header,
-footer {
+footer,
+header {
     width: 100%;
-    position: absolute; 
+    position: absolute;
     z-index: 1000;
 }
 
 header {
-    top: 0;  
-    height: 20px;
+    top: 0;
+
 }
-footer{   
+footer {
     bottom: 0;
+}
+
+.footerDiv {
     height: 20px;
     background: $black;
 }
-
 .biseau {
     position: absolute;
     z-index: 10;
@@ -49,8 +50,8 @@ footer{
     margin-left: -129px;
     background: $black;
 
-    &:before,
-    &:after {
+    &:after,
+    &:before {
         content: "";
         position: absolute;
         top: 0;
@@ -75,8 +76,9 @@ footer{
 // 梯形按鈕
 .btn {
     /*--- 變數 ---*/
-    $width:8rem;
-    $angle:40px;
+    $width: 8rem;
+    $height: 40px;
+    $angle: 40px;
     /*-----------*/
     width: $width;
     background: $black;
@@ -103,38 +105,35 @@ footer{
         position: absolute;
         width: 0;
         height: 0;
-        border-style: solid;   
+        border-style: solid;
     }
 
     &.leftTop {
         &:after {
-            @include biseauMixin(20px, auto, auto, $width, 0 0 $angle $angle, transparent transparent transparent $black)
+            @include biseauMixin(0, auto, auto, $width, 0 0 $angle $angle, transparent transparent transparent $black)
         }
     }
 
     &.rightTop {
         &:before {
-          
-            @include biseauMixin(20px, $width, auto, auto, 0 $angle $angle 0, transparent $black transparent transparent)
+
+            @include biseauMixin(0, $width, auto, auto, 0 $angle $angle 0, transparent $black transparent transparent)
         }
     }
 
     &.leftBottom {
         &:after {
-           
-            @include biseauMixin(auto, auto, 0, $width, 0 $angle $angle 0, transparent transparent $black transparent )
-        }     
-    } &.rightBottom {
-        &:before {
-            @include biseauMixin(auto, $width, 0, auto, $angle $angle 0  0, transparent $black transparent transparent)
+
+            @include biseauMixin(auto, auto, 0, $width, 0 $angle $angle 0, transparent transparent $black transparent)
         }
     }
-   
+    &.rightBottom {
+        &:before {
+            @include biseauMixin(auto, $width, 0, auto, $angle $angle 0 0, transparent $black transparent transparent)
+        }
+    }
+
 }
-
-
-
-
 
 .icon {
     display: inline-block;
@@ -143,7 +142,6 @@ footer{
 .right {
     float: right;
 }
-
 
 .adj {
     mix-blend-mode: difference;
@@ -165,7 +163,7 @@ footer{
 }
 
 .logo {
-    background: url(img/logo.svg) no-repeat;
+    background: url("img/logo.svg") no-repeat;
     background-size: 100%;
     width: 14rem;
     height: 5rem;
@@ -191,7 +189,7 @@ footer{
 }
 
 .moon {
-    background: url(img/moon.png) no-repeat;
+    background: url("img/moon.png") no-repeat;
     background-size: contain;
     width: 100%;
     height: 60rem;
@@ -204,7 +202,7 @@ footer{
 }
 
 .wing {
-    background: url(img/wing.png) no-repeat;
+    background: url("img/wing.png") no-repeat;
     background-size: contain;
     position: absolute;
     z-index: 3;
@@ -224,7 +222,7 @@ footer{
     content: "";
     clear: both;
     display: block;
-    background: url(img/screen.png) center center repeat;
+    background: url("img/screen.png") center center repeat;
     -webkit-background-size: 3px 3px;
     -moz-background-size: 3px 3px;
     -ms-background-size: 3px 3px;

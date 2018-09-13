@@ -30,11 +30,13 @@ footer {
 
 header {
   top: 0;
-  height: 20px;
 }
 
 footer {
   bottom: 0;
+}
+
+.footerDiv {
   height: 20px;
   background: #292929;
 }
@@ -84,7 +86,7 @@ footer {
 
 .btn.leftTop:after {
   content: '';
-  top: 20px;
+  top: 0;
   right: auto;
   bottom: auto;
   left: 8rem;
@@ -98,7 +100,7 @@ footer {
 
 .btn.rightTop:before {
   content: '';
-  top: 20px;
+  top: 0;
   right: 8rem;
   bottom: auto;
   left: auto;
