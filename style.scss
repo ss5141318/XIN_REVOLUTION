@@ -1,3 +1,5 @@
+@import 'reset';
+
 $black: #292929;
 
 * {
@@ -16,9 +18,25 @@ html {
 
 body,
 html,
-wrapper {
+.wrapper,
+.container {
     width: 100%;
     height: 100%;
+}
+.container{
+    border: 1px solid #f00;
+    position: absolute;
+    margin: 1rem;
+    &:hover{
+        background: #ffffff;
+    }
+    // &:after{
+    //     content: '';
+    //     border: 1px solid #f00;
+    //     width: 100%;
+    //     height: 100%;
+    //     display: block;
+    // }
 }
 
 footer,
@@ -157,7 +175,7 @@ footer {
     width: 100%;
     height: 100%;
     /*    background: red;*/
-    position: absolute;
+    position: relative;
     z-index: 2;
 }
 
