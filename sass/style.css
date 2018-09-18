@@ -3700,6 +3700,10 @@ header {
   top: 0;
 }
 
+header div {
+  float: left;
+}
+
 footer {
   bottom: 0;
 }
@@ -3755,6 +3759,10 @@ footer {
   display: inline-block;
   line-height: 20px;
   padding: 10px;
+}
+
+.btn.leftTop, .btn.rightTop {
+  vertical-align: top;
 }
 
 .btn.leftBottom {
@@ -3864,6 +3872,13 @@ footer {
 .logo {
   display: inline-block;
   width: calc(100% - 16rem);
+  padding-top: 10px;
+  vertical-align: top;
+}
+
+.logo img {
+  display: block;
+  margin: 0 auto;
 }
 
 .logoImg {

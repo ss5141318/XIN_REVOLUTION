@@ -37,7 +37,9 @@ header {
 
 header {
     top: 0;
-
+    div {
+        float: left;
+    }
 }
 footer {
     bottom: 0;
@@ -119,7 +121,10 @@ footer {
         height: 0;
         border-style: solid;
     }
-
+    &.leftTop,
+    &.rightTop {
+        vertical-align: top;
+    }
     // &.leftTop {
     //     &:after {
     //         @include biseauMixin(0, auto, auto, $width, 0 0 $angle $angle, transparent transparent transparent $black)
@@ -167,13 +172,13 @@ footer {
 // ----------------------------------
 
 // custom
-.wrapper{
+.wrapper {
     height: 100vh;
     position: relative;
 }
-.masterVision{
+.masterVision {
     position: absolute;
-    top:0;
+    top: 0;
     overflow: hidden;
     height: 100%;
     width: 100%;
@@ -232,10 +237,15 @@ footer {
 //     z-index: 100;
 // }
 
-.logo{
+.logo {
     display: inline-block;
     width: calc(100% - 16rem);
-    img{}
+    padding-top: 10px;
+    vertical-align: top;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
 }
 .logoImg {
     position: relative;
@@ -250,7 +260,7 @@ footer {
     position: absolute;
     width: 100%;
     height: 100%;
-    top:0;
+    top: 0;
 }
 
 .moon {
@@ -276,7 +286,7 @@ footer {
     width: 100%;
     height: 65rem;
     right: -50%;
-    top:0;
+    top: 0;
 }
 
 .video:before {
