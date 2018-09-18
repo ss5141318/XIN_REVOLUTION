@@ -171,11 +171,13 @@ footer {
     height: 100vh;
     position: relative;
 }
-// html{
-//     height: 100%;
-//     overflow: hidden;
-// }
-
+.masterVision{
+    position: absolute;
+    top:0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
 .crossDiv {
     border-right: 1px solid rgba(255,255,255,0.4);
     height: 100%;
@@ -269,6 +271,7 @@ footer {
     width: 100%;
     height: 65rem;
     right: -50%;
+    top:0;
 }
 
 .video:before {
