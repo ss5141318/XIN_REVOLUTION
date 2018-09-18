@@ -3862,15 +3862,8 @@ footer {
 }
 
 .logo {
-  background: url("../img/logo.svg") no-repeat;
-  background-size: 100%;
-  width: 14rem;
-  height: 5rem;
-  mix-blend-mode: difference;
-  position: absolute;
-  top: calc(50% - 5rem);
-  left: calc(50% - 5rem);
-  z-index: 100;
+  display: inline-block;
+  width: calc(100% - 16rem);
 }
 
 .logoImg {
