@@ -151,12 +151,11 @@ footer {
 
 // 瞄準方框
 
-
 .corner {
-width: 40px;
-height: 40px;
-position: absolute;
-border: 1px solid rgba(255,255,255,0.4);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border: 1px solid rgba(255,255,255,0.4);
 }
 
 .corner-top-left {
@@ -164,8 +163,30 @@ border: 1px solid rgba(255,255,255,0.4);
     border-right: none;
     top: 0;
     left: 0;
+}
+// ----------------------------------
+
+// custom
+.wrapper{
+    height: 100vh;
+    position: relative;
+}
+// html{
+//     height: 100%;
+//     overflow: hidden;
+// }
+
+.crossDiv {
+    border-right: 1px solid rgba(255,255,255,0.4);
+    height: 100%;
+    &:first-child {
+        border-left: 1px solid rgba(255,255,255,0.4);
     }
-// ------------------------------------
+}
+
+.h100 {
+    height: 100%;
+}
 .icon {
     display: inline-block;
 }
@@ -173,7 +194,7 @@ border: 1px solid rgba(255,255,255,0.4);
 .right {
     float: right;
 }
-
+// 主視覺
 .adj {
     mix-blend-mode: difference;
     /*    background-image: linear-gradient(149deg, #cacaca, #a4a4a4 29%, #4a3c3c);*/
@@ -182,7 +203,8 @@ border: 1px solid rgba(255,255,255,0.4);
     width: 100%;
     height: 100%;
     /*    background: red;*/
-    position: relative;
+    position: absolute;
+    top: 0;
     z-index: 2;
 }
 
@@ -217,9 +239,11 @@ border: 1px solid rgba(255,255,255,0.4);
     mix-blend-mode: difference;
 }
 
-.test {
+.logoDiv {
     position: absolute;
     width: 100%;
+    height: 100%;
+    top:0;
 }
 
 .moon {
