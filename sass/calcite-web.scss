@@ -3,7 +3,7 @@
 // └──────────────┘
 
 // Asset Paths
-// $image-path:                     '../img'   !default;
+$image-path:                     '../img'   !default;
 $font-path:                      '../fonts' !default;
 
 // Sass Output
@@ -22,11 +22,11 @@ $include-grid:                   $generate-css    !default;
   $block-grid:                   $generate-css    !default;
 
 // Grid Utilities Output
-// $include-leader-trailer:         $generate-css    !default;
-// $include-gutter:                 $generate-css    !default;
-// $include-left-right:             $generate-css    !default;
-// $include-show-hide:              $generate-css    !default;
-// $include-sticky:                 $generate-css    !default;
+$include-leader-trailer:         $generate-css    !default;
+$include-gutter:                 $generate-css    !default;
+$include-left-right:             $generate-css    !default;
+$include-show-hide:              $generate-css    !default;
+$include-sticky:                 $generate-css    !default;
 
 // Type Output
 // $include-type:                   $generate-css    !default;

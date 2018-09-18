@@ -1,4 +1,5 @@
-@import 'reset';
+// @import 'reset';
+@import 'calcite-web.scss';
 
 $black: #292929;
 
@@ -8,26 +9,14 @@ $black: #292929;
 
 body {
     background: #d8d8d8;
+    position: relative;
 }
 
-body,
-html {
-    overflow: hidden;
-    margin: 0;
-}
-
-body,
-html,
-.wrapper,
 .container {
-    width: 100%;
-    height: 100%;
-}
-.container{
     border: 1px solid #f00;
     position: absolute;
     margin: 1rem;
-    &:hover{
+    &:hover {
         background: #ffffff;
     }
     // &:after{
@@ -105,7 +94,6 @@ footer {
     $angle: 40px;
     /*-----------*/
     width: $width;
-    background: $black;
     color: #fff;
     display: inline-block;
     line-height: 20px;
@@ -132,26 +120,28 @@ footer {
         border-style: solid;
     }
 
-    &.leftTop {
-        &:after {
-            @include biseauMixin(0, auto, auto, $width, 0 0 $angle $angle, transparent transparent transparent $black)
-        }
-    }
+    // &.leftTop {
+    //     &:after {
+    //         @include biseauMixin(0, auto, auto, $width, 0 0 $angle $angle, transparent transparent transparent $black)
+    //     }
+    // }
 
-    &.rightTop {
-        &:before {
+    // &.rightTop {
+    //     &:before {
 
-            @include biseauMixin(0, $width, auto, auto, 0 $angle $angle 0, transparent $black transparent transparent)
-        }
-    }
+    //         @include biseauMixin(0, $width, auto, auto, 0 $angle $angle 0, transparent $black transparent transparent)
+    //     }
+    // }
 
     &.leftBottom {
+        background: $black;
         &:after {
 
             @include biseauMixin(auto, auto, 0, $width, 0 $angle $angle 0, transparent transparent $black transparent)
         }
     }
     &.rightBottom {
+        background: $black;
         &:before {
             @include biseauMixin(auto, $width, 0, auto, $angle $angle 0 0, transparent $black transparent transparent)
         }
@@ -190,7 +180,7 @@ footer {
 }
 
 .logo {
-    background: url("img/logo.svg") no-repeat;
+    background: url("../img/logo.svg") no-repeat;
     background-size: 100%;
     width: 14rem;
     height: 5rem;
@@ -216,7 +206,7 @@ footer {
 }
 
 .moon {
-    background: url("img/moon.png") no-repeat;
+    background: url("../img/moon.png") no-repeat;
     background-size: contain;
     width: 100%;
     height: 60rem;
@@ -229,7 +219,7 @@ footer {
 }
 
 .wing {
-    background: url("img/wing.png") no-repeat;
+    background: url("../img/wing.png") no-repeat;
     background-size: contain;
     position: absolute;
     z-index: 3;
@@ -249,7 +239,7 @@ footer {
     content: "";
     clear: both;
     display: block;
-    background: url("img/screen.png") center center repeat;
+    background: url("../img/screen.png") center center repeat;
     -webkit-background-size: 3px 3px;
     -moz-background-size: 3px 3px;
     -ms-background-size: 3px 3px;
