@@ -3763,15 +3763,12 @@ footer {
   cursor: pointer;
 }
 
-.btn.btnSquare {
-  transition: all 1s ease 0s;
-  -webkit-transition: all 1s ease 0s;
-  -moz-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
-  -ms-transition: all 1s ease 0s;
-}
-
 .btn.btnSquare:before {
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
   content: '';
   width: 10px;
   height: 10px;

@@ -3,7 +3,7 @@
 
 $black: #292929;
 
-@mixin transition ($property:all,$duration:1s,$function:ease,$delay:0s )  {
+@mixin transition ($property:all , $duration:0.5s, $function:ease , $delay:0s )  {
     transition: $property $duration $function $delay;
     -webkit-transition: $property $duration $function $delay;
     -moz-transition: $property $duration $function $delay;
@@ -117,9 +117,11 @@ footer {
     //    &.borderBottom {
     //         border-bottom: 1px solid #d8d8d8;
     //     }
+    // 方形按鈕
     &.btnSquare {
-        @include transition;
+       
         &:before {
+            @include transition;
             content: '';
             width: 10px;
             height: 10px;
@@ -130,7 +132,7 @@ footer {
 
         }
         &:hover {
-
+            
             &:before {
                 content: '';
                 width: 100px;
