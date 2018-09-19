@@ -3,6 +3,14 @@
 
 $black: #292929;
 
+@mixin transition ($property:all,$duration:1s,$function:ease,$delay:0s )  {
+    transition: $property $duration $function $delay;
+    -webkit-transition: $property $duration $function $delay;
+    -moz-transition: $property $duration $function $delay;
+    -o-transition: $property $duration $function $delay;
+    -ms-transition: $property $duration $function $delay;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -110,6 +118,7 @@ footer {
     //         border-bottom: 1px solid #d8d8d8;
     //     }
     &.btnSquare {
+        @include transition;
         &:before {
             content: '';
             width: 10px;
@@ -117,6 +126,7 @@ footer {
             background: #fff;
             display: inline-block;
             margin: 0 0.3rem;
+            position: absolute;
 
         }
         &:hover {
@@ -150,13 +160,13 @@ footer {
         background: $black;
         &:after {
 
-            @include biseauMixin(auto, auto, 0, $width, 0 $angle $angle 0, transparent transparent $black transparent)
+            @include biseauMixin(auto, auto, 0, $width, 0 $angle $angle 0, transparent transparent $black transparent);
         }
     }
     &.rightBottom {
         background: $black;
         &:before {
-            @include biseauMixin(auto, $width, 0, auto, $angle $angle 0 0, transparent $black transparent transparent)
+            @include biseauMixin(auto, $width, 0, auto, $angle $angle 0 0, transparent $black transparent transparent);
         }
     }
 
