@@ -88,7 +88,7 @@ footer {
     }
 }
 
-// 梯形按鈕
+// 按鈕
 .btn {
     /*--- 變數 ---*/
     $width: 8rem;
@@ -100,6 +100,8 @@ footer {
     display: inline-block;
     line-height: 20px;
     padding: 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
 
     //     &.borderTop {
     //         border-top: 1px solid #d8d8d8;
@@ -107,7 +109,17 @@ footer {
     //    &.borderBottom {
     //         border-bottom: 1px solid #d8d8d8;
     //     }
+    &.btnSquare {
+        &:before {
+            content:''; 
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            display: inline-block;
+        }
+    }
 
+    // 梯形按鈕
     @mixin biseauMixin($top:auto, $right:auto, $bottom:auto, $left:auto, $border-width:0 0 0 0, $border-color:transparent) {
         content: '';
         top: $top;
@@ -125,18 +137,6 @@ footer {
     &.rightTop {
         vertical-align: top;
     }
-    // &.leftTop {
-    //     &:after {
-    //         @include biseauMixin(0, auto, auto, $width, 0 0 $angle $angle, transparent transparent transparent $black)
-    //     }
-    // }
-
-    // &.rightTop {
-    //     &:before {
-
-    //         @include biseauMixin(0, $width, auto, auto, 0 $angle $angle 0, transparent $black transparent transparent)
-    //     }
-    // }
 
     &.leftBottom {
         background: $black;
@@ -169,7 +169,7 @@ footer {
     top: 0;
     left: 0;
 }
-// ----------------------------------
+// ---------------------------------//
 
 // custom
 
@@ -268,8 +268,6 @@ footer {
     height: 100%;
     width: 100%;
     position: fixed;
-
-
 
     .bottomSight,
     .topSight {

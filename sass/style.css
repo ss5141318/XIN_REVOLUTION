@@ -3759,6 +3759,16 @@ footer {
   display: inline-block;
   line-height: 20px;
   padding: 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn.btnSquare:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  display: inline-block;
 }
 
 .btn.leftTop, .btn.rightTop {
