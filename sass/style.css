@@ -3815,6 +3815,10 @@ footer {
   left: 0;
 }
 
+.relative {
+  position: relative;
+}
+
 .wrapper {
   height: 100vh;
   position: relative;
@@ -3876,9 +3880,80 @@ footer {
   vertical-align: top;
 }
 
-.logo img {
+.logo .index {
   display: block;
-  margin: 0 auto;
+  margin: auto;
+  position: relative;
+  float: none;
+  width: 30%;
+}
+
+.logo .index img {
+  display: block;
+  margin: auto;
+}
+
+.sight {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.sight .bottomSight,
+.sight .topSight {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+}
+
+.sight .topSight {
+  top: 0;
+}
+
+.sight .topSight:after, .sight .topSight:before {
+  content: '';
+  bottom: -140%;
+  top: auto;
+  height: 20px;
+  width: 20rem;
+  background-size: 100%;
+  position: absolute;
+}
+
+.sight .topSight:before {
+  background: url("../img/topLeftSight.svg") no-repeat center top;
+  left: 22%;
+}
+
+.sight .topSight:after {
+  background: url("../img/topRightSight.svg") no-repeat center top;
+  right: 22%;
+}
+
+.sight .bottomSight {
+  bottom: 0;
+}
+
+.sight .bottomSight:after, .sight .bottomSight:before {
+  content: '';
+  bottom: auto;
+  top: -140%;
+  height: 20px;
+  width: 20rem;
+  background-size: 100%;
+  position: absolute;
+}
+
+.sight .bottomSight:before {
+  background: url("../img/bottomLeftSight.svg") no-repeat center bottom;
+  left: 22%;
+}
+
+.sight .bottomSight:after {
+  background: url("../img/bottomRightSight.svg") no-repeat center bottom;
+  right: 22%;
 }
 
 .logoImg {

@@ -172,6 +172,11 @@ footer {
 // ----------------------------------
 
 // custom
+
+.relative {
+    position: relative;
+}
+
 .wrapper {
     height: 100vh;
     position: relative;
@@ -242,11 +247,82 @@ footer {
     width: calc(100% - 16rem);
     padding-top: 10px;
     vertical-align: top;
-    img {
+
+    .index {
         display: block;
-        margin: 0 auto;
+        margin: auto;
+        position: relative;
+        float: none;
+        width: 30%;
+
+        img {
+            display: block;
+            margin: auto;
+        }
     }
 }
+
+.sight {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+
+
+
+    .bottomSight,
+    .topSight {
+        width: 100%;
+        height: 40px;
+        position: absolute;
+
+    }
+
+    $positon: 22%;
+    @mixin sight($top:auto,$bottom:auto) {
+        content: '';
+        bottom: $bottom;
+        top: $top;
+        height: 20px;
+        width: 20rem;
+        background-size: 100%;
+        position: absolute;
+    }
+    //-------------------//
+    .topSight {
+        top: 0;
+        &:after,
+        &:before {
+            @include sight($bottom:-140%)
+        }
+        &:before {
+            background: url("../img/topLeftSight.svg")no-repeat center top;
+            left: $positon;
+        }
+        &:after {
+            background: url("../img/topRightSight.svg")no-repeat center top;
+            right: $positon;
+        }
+    }
+    .bottomSight {
+        bottom: 0;
+        &:after,
+        &:before {
+            @include sight($top:-140%)
+        }
+        &:before {
+            background: url("../img/bottomLeftSight.svg")no-repeat center bottom;
+            left: $positon;
+        }
+        &:after {
+            background: url("../img/bottomRightSight.svg")no-repeat center bottom;
+            right: $positon;
+        }
+    }
+
+}
+
 .logoImg {
     position: relative;
     margin: 20% auto;
