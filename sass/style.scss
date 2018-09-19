@@ -99,7 +99,7 @@ footer {
     color: #fff;
     display: inline-block;
     line-height: 20px;
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 0.8rem;
     cursor: pointer;
 
@@ -111,14 +111,22 @@ footer {
     //     }
     &.btnSquare {
         &:before {
-            content:''; 
+            content: '';
             width: 10px;
             height: 10px;
             background: #fff;
             display: inline-block;
+            margin: 0 0.3rem;
+
+        }
+        &:hover {
+
+            &:before {
+                content: '';
+                width: 100px;
+            }
         }
     }
-
     // 梯形按鈕
     @mixin biseauMixin($top:auto, $right:auto, $bottom:auto, $left:auto, $border-width:0 0 0 0, $border-color:transparent) {
         content: '';

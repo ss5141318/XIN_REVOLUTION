@@ -3758,7 +3758,7 @@ footer {
   color: #fff;
   display: inline-block;
   line-height: 20px;
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 0.8rem;
   cursor: pointer;
 }
@@ -3769,6 +3769,12 @@ footer {
   height: 10px;
   background: #fff;
   display: inline-block;
+  margin: 0 0.3rem;
+}
+
+.btn.btnSquare:hover:before {
+  content: '';
+  width: 100px;
 }
 
 .btn.leftTop, .btn.rightTop {
