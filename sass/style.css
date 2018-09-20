@@ -3859,8 +3859,8 @@ footer {
   height: 100%;
 }
 
-.crossDiv:first-child {
-  border-left: 1px solid rgba(255, 255, 255, 0.4);
+.crossDiv:nth-child(2) {
+  border-left: 1px solid rgba(255, 255, 255, 0.4) !important;
 }
 
 .h100 {

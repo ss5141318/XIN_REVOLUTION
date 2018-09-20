@@ -208,11 +208,12 @@ footer {
     height: 100%;
     width: 100%;
 }
+
 .crossDiv {
     border-right: 1px solid rgba(255,255,255,0.4);
     height: 100%;
-    &:first-child {
-        border-left: 1px solid rgba(255,255,255,0.4);
+    &:nth-child(2) {
+        border-left: 1px solid rgba(255,255,255,0.4) !important;
     }
 }
 
