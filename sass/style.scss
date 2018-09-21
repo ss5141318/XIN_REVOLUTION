@@ -98,16 +98,15 @@ footer {
 
 // 按鈕
 .btn {
-    /*--- 變數 ---*/
-    $width: 8rem;
-    $height: 40px;
-    $angle: 40px;
-    /*-----------*/
-    width: $width;
+       /*--- 變數 ---*/
+       $width: 8rem;
+       $height: 40px;
+       $angle: 40px;
+       $hoverWhite:rgba(255, 255, 255, 0.8);
+       /*-----------*/
     color: #fff;
     display: inline-block;
     line-height: 20px;
-    padding: 10px 20px;
     font-size: 0.8rem;
     cursor: pointer;
 
@@ -117,9 +116,17 @@ footer {
     //    &.borderBottom {
     //         border-bottom: 1px solid #d8d8d8;
     //     }
+
+&.icon{
+    @include transition;
+    &:hover{
+        background: $hoverWhite;
+        color:#000;
+    }
+}
     // 方形按鈕
     &.btnSquare {
-       
+        width: 100%;
         &:before {
             @include transition;
             content: '';
@@ -128,18 +135,20 @@ footer {
             background: #fff;
             display: inline-block;
             margin: 0 0.3rem;
-            position: absolute;
-
+            // position: absolute;
         }
         &:hover {
-            
+            background: $hoverWhite;
+            color:#000;
             &:before {
                 content: '';
-                width: 100px;
+                // width: 100px;
+                background: #000;
             }
         }
     }
     // 梯形按鈕
+   
     @mixin biseauMixin($top:auto, $right:auto, $bottom:auto, $left:auto, $border-width:0 0 0 0, $border-color:transparent) {
         content: '';
         top: $top;
@@ -154,10 +163,14 @@ footer {
         border-style: solid;
     }
     &.leftTop,
+    &.rightTop,&.leftBottom, &.rightBottom { 
+    width: $width;
+    padding: 10px 0.5rem;
+    }
+    &.leftTop,
     &.rightTop {
         vertical-align: top;
     }
-
     &.leftBottom {
         background: $black;
         &:after {
@@ -180,9 +193,6 @@ footer {
 .h100 {
     height: 100%;
 }
-.icon {
-    display: inline-block;
-}
 
 .right {
     float: right;
@@ -200,6 +210,8 @@ footer {
 .crossDiv {
     border-right: 1px solid rgba(255,255,255,0.4);
     height: 100%;
+    padding-top:calc(0.5rem + 40px);
+    padding-bottom:calc(0.5rem + 40px); 
     &:nth-child(2) {
         border-left: 1px solid rgba(255,255,255,0.4) !important;
     }
@@ -337,6 +349,7 @@ footer {
     }
 
     $positon: 22%;
+    $sightPosition:-140%;
     @mixin sight($top:auto,$bottom:auto) {
         content: '';
         bottom: $bottom;
@@ -345,13 +358,14 @@ footer {
         width: 20rem;
         background-size: 100%;
         position: absolute;
+        mix-blend-mode: difference;
     }
     //-------------------//
     .topSight {
         top: 0;
         &:after,
         &:before {
-            @include sight($bottom:-140%)
+            @include sight($bottom:$sightPosition)
         }
         &:before {
             background: url("../img/topLeftSight.svg")no-repeat center top;
@@ -366,7 +380,7 @@ footer {
         bottom: 0;
         &:after,
         &:before {
-            @include sight($top:-140%)
+            @include sight($top:$sightPosition)
         }
         &:before {
             background: url("../img/bottomLeftSight.svg")no-repeat center bottom;

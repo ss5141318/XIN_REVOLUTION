@@ -3754,13 +3754,28 @@ footer {
 .btn {
   /*--- 變數 ---*/
   /*-----------*/
-  width: 8rem;
   color: #fff;
   display: inline-block;
   line-height: 20px;
-  padding: 10px 20px;
   font-size: 0.8rem;
   cursor: pointer;
+}
+
+.btn.icon {
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+}
+
+.btn.icon:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+.btn.btnSquare {
+  width: 100%;
 }
 
 .btn.btnSquare:before {
@@ -3775,12 +3790,21 @@ footer {
   background: #fff;
   display: inline-block;
   margin: 0 0.3rem;
-  position: absolute;
+}
+
+.btn.btnSquare:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
 }
 
 .btn.btnSquare:hover:before {
   content: '';
-  width: 100px;
+  background: #000;
+}
+
+.btn.leftTop, .btn.rightTop, .btn.leftBottom, .btn.rightBottom {
+  width: 8rem;
+  padding: 10px 0.5rem;
 }
 
 .btn.leftTop, .btn.rightTop {
@@ -3827,10 +3851,6 @@ footer {
   height: 100%;
 }
 
-.icon {
-  display: inline-block;
-}
-
 .right {
   float: right;
 }
@@ -3847,6 +3867,8 @@ footer {
 .crossDiv {
   border-right: 1px solid rgba(255, 255, 255, 0.4);
   height: 100%;
+  padding-top: calc(0.5rem + 40px);
+  padding-bottom: calc(0.5rem + 40px);
 }
 
 .crossDiv:nth-child(2) {
@@ -3976,6 +3998,7 @@ footer {
   width: 20rem;
   background-size: 100%;
   position: absolute;
+  mix-blend-mode: difference;
 }
 
 .sight .topSight:before {
@@ -4000,6 +4023,7 @@ footer {
   width: 20rem;
   background-size: 100%;
   position: absolute;
+  mix-blend-mode: difference;
 }
 
 .sight .bottomSight:before {
