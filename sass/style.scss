@@ -318,7 +318,7 @@ footer {
     width: calc(100% - 16rem);
     padding-top: 10px;
     vertical-align: top;
-
+    mix-blend-mode: difference;
     .index {
         display: block;
         margin: auto;
@@ -329,6 +329,7 @@ footer {
         img {
             display: block;
             margin: auto;
+            // mix-blend-mode: difference;
         }
     }
 }
@@ -339,7 +340,7 @@ footer {
     height: 100%;
     width: 100%;
     position: fixed;
-
+    z-index: 999;
     .bottomSight,
     .topSight {
         width: 100%;
