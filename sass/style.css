@@ -3873,6 +3873,7 @@ footer {
 .newsDiv {
   background: #000;
   height: calc(100% / 3);
+  margin: 0 -0.5rem 0.5rem 0;
 }
 
 .dateDiv {
