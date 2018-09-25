@@ -3877,7 +3877,7 @@ footer {
 }
 
 .dateDiv {
-  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.4);
   height: calc((100% - 0.5rem ) / 2);
 }
 
