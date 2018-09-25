@@ -206,8 +206,26 @@ footer {
     height: 100vh;
     position: relative;
 }
+// 內容
+.content{
+    height: 100%;
+    padding-top:calc(0.5rem + 40px);
+    padding-bottom:calc(0.5rem + 40px); 
+}
+.newsDiv{
+    background: #000;
+    height: calc(100% / 3);
+}
+.dateDiv{
+    background: #000;
+    height: calc((100% - 0.5rem ) / 2);
+    &:first-child{
+        margin-bottom: 0.5rem;
+    }
+}
 
-// 十字內容
+
+// 十字框線
 %crossDivLINE {
     content: '';
     position: absolute;
@@ -237,11 +255,7 @@ footer {
    }
 }
 
-.content{
-    height: 100%;
-    padding-top:calc(0.5rem + 40px);
-    padding-bottom:calc(0.5rem + 40px); 
-}
+
 
 // 主視覺
 .masterVision {
@@ -448,14 +462,3 @@ footer {
 
 
 
-.newsDiv{
-    background: #000;
-    height: calc(100% / 3);
-}
-.dateDiv{
-    background: #000;
-    height: calc((100% - 0.5rem ) / 2);
-    &:first-child{
-        margin-bottom: 0.5rem;
-    }
-}

@@ -3864,6 +3864,26 @@ footer {
   position: relative;
 }
 
+.content {
+  height: 100%;
+  padding-top: calc(0.5rem + 40px);
+  padding-bottom: calc(0.5rem + 40px);
+}
+
+.newsDiv {
+  background: #000;
+  height: calc(100% / 3);
+}
+
+.dateDiv {
+  background: #000;
+  height: calc((100% - 0.5rem ) / 2);
+}
+
+.dateDiv:first-child {
+  margin-bottom: 0.5rem;
+}
+
 .crossDiv div:after, .crossDiv div:nth-child(1):before {
   content: '';
   position: absolute;
@@ -3892,12 +3912,6 @@ footer {
 
 .crossDiv div:nth-child(1):before {
   left: 0;
-}
-
-.content {
-  height: 100%;
-  padding-top: calc(0.5rem + 40px);
-  padding-bottom: calc(0.5rem + 40px);
 }
 
 .masterVision {
@@ -4084,19 +4098,5 @@ footer {
   border-right: none;
   top: 0;
   left: 0;
-}
-
-.newsDiv {
-  background: #000;
-  height: calc(100% / 3);
-}
-
-.dateDiv {
-  background: #000;
-  height: calc((100% - 0.5rem ) / 2);
-}
-
-.dateDiv:first-child {
-  margin-bottom: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */
