@@ -3964,7 +3964,7 @@ footer {
   margin: auto;
   position: relative;
   float: none;
-  width: 30%;
+  width: 5%;
 }
 
 .logo .index img {
@@ -3994,7 +3994,7 @@ footer {
 
 .sight .topSight:after, .sight .topSight:before {
   content: '';
-  bottom: -140%;
+  bottom: -20px;
   top: auto;
   height: 20px;
   width: 20rem;
@@ -4020,7 +4020,7 @@ footer {
 .sight .bottomSight:after, .sight .bottomSight:before {
   content: '';
   bottom: auto;
-  top: -140%;
+  top: -20px;
   height: 20px;
   width: 20rem;
   background-size: 100%;
@@ -4059,5 +4059,19 @@ footer {
   border-right: none;
   top: 0;
   left: 0;
+}
+
+.newsDiv {
+  background: #000;
+  height: calc(100% / 3);
+}
+
+.dateDiv {
+  background: #000;
+  height: calc((100% - 0.5rem ) / 2);
+}
+
+.dateDiv:first-child {
+  margin-bottom: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -324,7 +324,7 @@ footer {
         margin: auto;
         position: relative;
         float: none;
-        width: 30%;
+        width: 5%;
 
         img {
             display: block;
@@ -350,7 +350,7 @@ footer {
     }
 
     $positon: 22%;
-    $sightPosition:-140%;
+    $sightPosition:-20px;
     @mixin sight($top:auto,$bottom:auto) {
         content: '';
         bottom: $bottom;
@@ -420,3 +420,17 @@ footer {
     left: 0;
 }
 // ---------------------------------//
+
+
+
+.newsDiv{
+    background: #000;
+    height: calc(100% / 3);
+}
+.dateDiv{
+    background: #000;
+    height: calc((100% - 0.5rem ) / 2);
+    &:first-child{
+        margin-bottom: 0.5rem;
+    }
+}
