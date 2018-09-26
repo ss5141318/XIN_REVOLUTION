@@ -3793,6 +3793,7 @@ header div {
 
 footer {
   bottom: 0;
+  left: 0;
 }
 
 .footerDiv {
