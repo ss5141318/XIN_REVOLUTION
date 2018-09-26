@@ -3853,13 +3853,15 @@ footer {
 .wrapper {
   height: 100vh;
   position: relative;
+  overflow: auto;
 }
 
 .content {
   height: 100%;
   padding-top: calc(0.5rem + 40px);
   padding-bottom: calc(0.5rem + 40px);
-  overflow-y: auto;
+  position: relative;
+  z-index: 999;
 }
 
 .newsDiv {
@@ -3889,7 +3891,7 @@ footer {
 }
 
 .crossDiv {
-  position: absolute;
+  position: fixed;
   top: 0;
   height: 100%;
 }
@@ -4006,27 +4008,19 @@ footer {
   margin: auto;
 }
 
-.sight {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 999;
-}
-
-.sight .bottomSight,
-.sight .topSight {
+.bottomSight,
+.topSight {
   width: 100%;
   height: 40px;
-  position: absolute;
+  position: fixed;
+  z-index: 1000;
 }
 
-.sight .topSight {
+.topSight {
   top: 0;
 }
 
-.sight .topSight:after, .sight .topSight:before {
+.topSight:after, .topSight:before {
   content: '';
   bottom: -20px;
   top: auto;
@@ -4037,21 +4031,21 @@ footer {
   mix-blend-mode: difference;
 }
 
-.sight .topSight:before {
+.topSight:before {
   background: url("../img/topLeftSight.svg") no-repeat center top;
   left: 22%;
 }
 
-.sight .topSight:after {
+.topSight:after {
   background: url("../img/topRightSight.svg") no-repeat center top;
   right: 22%;
 }
 
-.sight .bottomSight {
+.bottomSight {
   bottom: 0;
 }
 
-.sight .bottomSight:after, .sight .bottomSight:before {
+.bottomSight:after, .bottomSight:before {
   content: '';
   bottom: auto;
   top: -20px;
@@ -4062,12 +4056,12 @@ footer {
   mix-blend-mode: difference;
 }
 
-.sight .bottomSight:before {
+.bottomSight:before {
   background: url("../img/bottomLeftSight.svg") no-repeat center bottom;
   left: 22%;
 }
 
-.sight .bottomSight:after {
+.bottomSight:after {
   background: url("../img/bottomRightSight.svg") no-repeat center bottom;
   right: 22%;
 }

@@ -192,13 +192,15 @@ footer {
 .wrapper {
     height: 100vh;
     position: relative;
+    overflow: auto;
 }
 // 內容
 .content{
     height: 100%;
     padding-top:calc(0.5rem + 40px);
     padding-bottom:calc(0.5rem + 40px); 
-    overflow-y:auto;
+    position: relative;
+    z-index: 999;
 }
 .newsDiv{
     background: rgba(0, 0, 0, 0.5);
@@ -228,7 +230,7 @@ footer {
 }
 //--------------------//
 .crossDiv {
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100%;
   div{
@@ -365,19 +367,14 @@ footer {
     }
 }
 // 瞄準鏡 座標
-.sight {
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 999;
+
+
     .bottomSight,
     .topSight {
         width: 100%;
-        height: 40px;
-        position: absolute;
-
+        height: 40px; 
+        position: fixed;
+        z-index: 1000;
     }
 
     $positon: 22%;
@@ -424,7 +421,7 @@ footer {
         }
     }
 
-}
+
 
 .logoImg {
     position: relative;
