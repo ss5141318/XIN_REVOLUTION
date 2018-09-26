@@ -3893,11 +3893,12 @@ footer {
   display: inline-block;
   position: relative;
   float: none;
+  vertical-align: middle;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 200;
-  margin-right: 0.5rem;
+  margin-right: calc(0.5rem - 4px);
 }
 
 .workDiv:first-child {
