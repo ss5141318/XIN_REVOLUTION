@@ -137,9 +137,18 @@ footer {
 
 .workDiv {
     background: rgba(0, 0, 0, 0.5);
-    width: 30%;
+    // width: 18rem;
     height: 200px;
     display: inline-block;
+    position: relative;
+    float: none;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 200;
+    margin-right: 0.5rem;
+    &:first-child {
+        margin-left: 0.5rem;
+    }
 }
 
 // 十字框線
@@ -157,6 +166,7 @@ footer {
     position: fixed;
     top: 0;
     height: 100%;
+    z-index: 1;
 
     div {
         height: 100%;

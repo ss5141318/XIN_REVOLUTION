@@ -3889,9 +3889,19 @@ footer {
 
 .workDiv {
   background: rgba(0, 0, 0, 0.5);
-  width: 30%;
   height: 200px;
   display: inline-block;
+  position: relative;
+  float: none;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 200;
+  margin-right: 0.5rem;
+}
+
+.workDiv:first-child {
+  margin-left: 0.5rem;
 }
 
 .crossDiv div:after, .crossDiv div:nth-child(1):before {
@@ -3907,6 +3917,7 @@ footer {
   position: fixed;
   top: 0;
   height: 100%;
+  z-index: 1;
 }
 
 .crossDiv div {
