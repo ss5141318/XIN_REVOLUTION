@@ -1,92 +1,107 @@
 @import 'mixin.scss';
+
 // 按鈕
 .btn {
     /*--- 變數 ---*/
     $width: 8rem;
     $height: 40px;
     $angle: 40px;
-    $hoverWhite:rgba(255, 255, 255, 0.8);
+    $hoverWhite: rgba(255, 255, 255, 0.8);
     /*-----------*/
- color: #fff;
- display: inline-block;
- line-height: 20px;
- font-size: 0.8rem;
- cursor: pointer;
+    color: #fff;
+    display: inline-block;
+    line-height: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
 
- //     &.borderTop {
- //         border-top: 1px solid #d8d8d8;
- //     }
- //    &.borderBottom {
- //         border-bottom: 1px solid #d8d8d8;
- //     }
+    //     &.borderTop {
+    //         border-top: 1px solid #d8d8d8;
+    //     }
+    //    &.borderBottom {
+    //         border-bottom: 1px solid #d8d8d8;
+    //     }
 
-&.icon{
- @include transition;
- &:hover{
-     background: $hoverWhite;
-     color:#000;
- }
+    &.icon {
+        @include transition;
+
+        &:hover {
+            background: $hoverWhite;
+            color: #000;
+        }
+    }
+
+    // 方形按鈕
+    &.btnSquare {
+        width: 100%;
+
+        &:before {
+            @include transition;
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            display: inline-block;
+            margin: 0 0.3rem;
+            // position: absolute;
+        }
+
+        &:hover,
+        &:active {
+            background: $hoverWhite;
+            color: #000;
+
+            &:before {
+                content: '';
+                // width: 100px;
+                background: #000;
+            }
+        }
+    }
+
+    // 梯形按鈕
+
+    @mixin biseauMixin($top:auto, $right:auto, $bottom:auto, $left:auto, $border-width:0 0 0 0, $border-color:transparent) {
+        content: '';
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+        border-width: $border-width;
+        border-color: $border-color;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+
+    &.leftTop,
+    &.rightTop,
+    &.leftBottom,
+    &.rightBottom {
+        width: $width;
+        padding: 10px 0.5rem;
+    }
+
+    &.leftTop,
+    &.rightTop {
+        vertical-align: top;
+    }
+
+    &.leftBottom {
+        background: $black;
+
+        &:after {
+
+            @include biseauMixin(auto, auto, 0, $width, 0 $angle $angle 0, transparent transparent $black transparent);
+        }
+    }
+
+    &.rightBottom {
+        background: $black;
+
+        &:before {
+            @include biseauMixin(auto, $width, 0, auto, $angle $angle 0 0, transparent $black transparent transparent);
+        }
+    }
+
 }
- // 方形按鈕
- &.btnSquare {
-     width: 100%;
-     &:before {
-         @include transition;
-         content: '';
-         width: 10px;
-         height: 10px;
-         background: #fff;
-         display: inline-block;
-         margin: 0 0.3rem;
-         // position: absolute;
-     }
-     &:hover,&:active {
-         background: $hoverWhite;
-         color:#000;
-         &:before {
-             content: '';
-             // width: 100px;
-             background: #000;
-         }
-     }
- }
- // 梯形按鈕
-
- @mixin biseauMixin($top:auto, $right:auto, $bottom:auto, $left:auto, $border-width:0 0 0 0, $border-color:transparent) {
-     content: '';
-     top: $top;
-     right: $right;
-     bottom: $bottom;
-     left: $left;
-     border-width: $border-width;
-     border-color: $border-color;
-     position: absolute;
-     width: 0;
-     height: 0;
-     border-style: solid;
- }
- &.leftTop,
- &.rightTop,&.leftBottom, &.rightBottom { 
- width: $width;
- padding: 10px 0.5rem;
- }
- &.leftTop,
- &.rightTop {
-     vertical-align: top;
- }
- &.leftBottom {
-     background: $black;
-     &:after {
-
-         @include biseauMixin(auto, auto, 0, $width, 0 $angle $angle 0, transparent transparent $black transparent);
-     }
- }
- &.rightBottom {
-     background: $black;
-     &:before {
-         @include biseauMixin(auto, $width, 0, auto, $angle $angle 0 0, transparent $black transparent transparent);
-     }
- }
-
-}
-
