@@ -3863,6 +3863,11 @@ footer {
   padding-bottom: calc(0.5rem + 40px);
   position: relative;
   z-index: 999;
+  width: 100%;
+}
+
+.content.horizontalScroll {
+  white-space: nowrap;
 }
 
 .newsDiv {
@@ -3875,11 +3880,18 @@ footer {
 .dateDiv {
   border: 1px solid rgba(255, 255, 255, 0.4);
   background: rgba(0, 0, 0, 0.5);
-  height: calc((100% - 0.5rem ) / 2);
+  height: calc((100% - 0.5rem) / 2);
 }
 
 .dateDiv:first-child {
   margin-bottom: 0.5rem;
+}
+
+.workDiv {
+  background: rgba(0, 0, 0, 0.5);
+  width: 30%;
+  height: 200px;
+  display: inline-block;
 }
 
 .crossDiv div:after, .crossDiv div:nth-child(1):before {

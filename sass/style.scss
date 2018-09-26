@@ -27,13 +27,15 @@ header {
 
 header {
     top: 0;
+
     div {
         float: left;
     }
 }
+
 footer {
     bottom: 0;
-    left:0;
+    left: 0;
 }
 
 
@@ -47,6 +49,7 @@ footer {
     right: 0;
     background: $black;
 }
+
 .biseau {
     position: absolute;
     z-index: 10;
@@ -90,6 +93,7 @@ footer {
 .right {
     float: right;
 }
+
 .relative {
     position: relative;
 }
@@ -99,30 +103,44 @@ footer {
     position: relative;
     overflow: auto;
 }
+
 // 內容
-.content{
+.content {
     height: 100%;
-    padding-top:calc(0.5rem + 40px);
-    padding-bottom:calc(0.5rem + 40px); 
+    padding-top: calc(0.5rem + 40px);
+    padding-bottom: calc(0.5rem + 40px);
     position: relative;
     z-index: 999;
-}
-.newsDiv{
-    background: rgba(0, 0, 0, 0.5);
-    height: calc((100% - 1rem) / 3);
-    margin:0 -0.5rem 0.5rem 0;
-    border: 1px solid rgba(255,255,255,0.4);
+    width: 100%;
+
+    &.horizontalScroll {
+        white-space: nowrap;
+    }
 }
 
-.dateDiv{
-    border: 1px solid rgba(255,255,255,0.4);
-    background: rgba(0, 0, 0, 0.5);;
-    height: calc((100% - 0.5rem ) / 2);
-    &:first-child{
+.newsDiv {
+    background: rgba(0, 0, 0, 0.5);
+    height: calc((100% - 1rem) / 3);
+    margin: 0 -0.5rem 0.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dateDiv {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.5);
+    height: calc((100% - 0.5rem) / 2);
+
+    &:first-child {
         margin-bottom: 0.5rem;
     }
 }
 
+.workDiv {
+    background: rgba(0, 0, 0, 0.5);
+    width: 30%;
+    height: 200px;
+    display: inline-block;
+}
 
 // 十字框線
 %crossDivLINE {
@@ -130,28 +148,32 @@ footer {
     position: absolute;
     width: 1px;
     height: calc(100% + 40px);
-    background:$lineColor;
+    background: $lineColor;
     top: -40px;
 }
+
 //--------------------//
 .crossDiv {
     position: fixed;
     top: 0;
     height: 100%;
-  div{
-    height: 100%;
-    padding-top:calc(0.5rem + 40px);
-    padding-bottom:calc(0.5rem + 40px); 
-    position: relative;
-    &:after{
-        @extend %crossDivLINE;
-       right:0;     
+
+    div {
+        height: 100%;
+        padding-top: calc(0.5rem + 40px);
+        padding-bottom: calc(0.5rem + 40px);
+        position: relative;
+
+        &:after {
+            @extend %crossDivLINE;
+            right: 0;
+        }
+
+        &:nth-child(1):before {
+            @extend %crossDivLINE;
+            left: 0;
+        }
     }
-    &:nth-child(1):before {
-        @extend %crossDivLINE;
-        left: 0;      
-    }
-   }
 }
 
 
@@ -164,6 +186,7 @@ footer {
     height: 100%;
     width: 100%;
 }
+
 .adj {
     mix-blend-mode: difference;
     /*    background-image: linear-gradient(149deg, #cacaca, #a4a4a4 29%, #4a3c3c);*/
@@ -245,6 +268,7 @@ footer {
     padding-top: 10px;
     vertical-align: top;
     mix-blend-mode: difference;
+
     .index {
         display: block;
         margin: auto;
@@ -259,60 +283,70 @@ footer {
         }
     }
 }
+
 // 瞄準鏡 座標
 
 
-    .bottomSight,
-    .topSight {
-        width: 100%;
-        height: 40px; 
-        position: fixed;
-        z-index: 1000;
+.bottomSight,
+.topSight {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    z-index: 1000;
+}
+
+$positon: 22%;
+$sightPosition:-20px;
+
+@mixin sight($top:auto, $bottom:auto) {
+    content: '';
+    bottom: $bottom;
+    top: $top;
+    height: 20px;
+    width: 20rem;
+    background-size: 100%;
+    position: absolute;
+    mix-blend-mode: difference;
+}
+
+//-------------------//
+.topSight {
+    top: 0;
+
+    &:after,
+    &:before {
+        @include sight($bottom: $sightPosition)
     }
 
-    $positon: 22%;
-    $sightPosition:-20px;
-    @mixin sight($top:auto,$bottom:auto) {
-        content: '';
-        bottom: $bottom;
-        top: $top;
-        height: 20px;
-        width: 20rem;
-        background-size: 100%;
-        position: absolute;
-        mix-blend-mode: difference;
+    &:before {
+        background: url("../img/topLeftSight.svg")no-repeat center top;
+        left: $positon;
     }
-    //-------------------//
-    .topSight {
-        top: 0;
-        &:after,
-        &:before {
-            @include sight($bottom:$sightPosition)
-        }
-        &:before {
-            background: url("../img/topLeftSight.svg")no-repeat center top;
-            left: $positon;
-        }
-        &:after {
-            background: url("../img/topRightSight.svg")no-repeat center top;
-            right: $positon;
-        }
+
+    &:after {
+        background: url("../img/topRightSight.svg")no-repeat center top;
+        right: $positon;
     }
-    .bottomSight {
-        bottom: 0;
-        &:after,
-        &:before {
-            @include sight($top:$sightPosition)
-        }
-        &:before {
-            background: url("../img/bottomLeftSight.svg")no-repeat center bottom;
-            left: $positon;
-        }
-        &:after {
-            background: url("../img/bottomRightSight.svg")no-repeat center bottom;
-            right: $positon;
-        }
+}
+
+.bottomSight {
+    bottom: 0;
+
+    &:after,
+    &:before {
+        @include sight($top: $sightPosition)
     }
+
+    &:before {
+        background: url("../img/bottomLeftSight.svg")no-repeat center bottom;
+        left: $positon;
+    }
+
+    &:after {
+        background: url("../img/bottomRightSight.svg")no-repeat center bottom;
+        right: $positon;
+    }
+}
 
 
 
@@ -340,7 +374,5 @@ footer {
     top: 0;
     left: 0;
 }
+
 // ---------------------------------//
-
-
-
