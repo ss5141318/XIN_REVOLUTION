@@ -1,8 +1,4 @@
 @charset "UTF-8";
-[class*="icon-"] {
-  background: red;
-}
-
 .btn {
   /*--- 變數 ---*/
   /*-----------*/
@@ -13,7 +9,8 @@
   cursor: pointer;
 }
 
-.btn.icon {
+.btn[class*="icon-"] {
+  background: red;
   transition: all 0.5s ease 0s;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
@@ -21,7 +18,7 @@
   -ms-transition: all 0.5s ease 0s;
 }
 
-.btn.icon:hover {
+.btn[class*="icon-"]:hover {
   background: rgba(255, 255, 255, 0.8);
   color: #000;
 }

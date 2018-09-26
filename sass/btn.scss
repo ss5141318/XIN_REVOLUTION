@@ -1,11 +1,6 @@
 @import 'mixin.scss';
 
 // 按鈕
-[class*="icon-"] {
-    background: red;
-}
-
-
 
 .btn {
     /*--- 變數 ---*/
@@ -20,6 +15,7 @@
     font-size: 0.8rem;
     cursor: pointer;
 
+
     //     &.borderTop {
     //         border-top: 1px solid #d8d8d8;
     //     }
@@ -27,7 +23,8 @@
     //         border-bottom: 1px solid #d8d8d8;
     //     }
 
-    &.icon {
+    &[class*="icon-"] {
+        background: red;
         @include transition;
 
         &:hover {
@@ -35,7 +32,7 @@
             color: #000;
         }
 
-    
+
     }
 
     // 方形按鈕
