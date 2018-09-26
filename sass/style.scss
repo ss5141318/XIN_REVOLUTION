@@ -125,7 +125,7 @@ footer {
             margin: 0 0.3rem;
             // position: absolute;
         }
-        &:hover {
+        &:hover,&:active {
             background: $hoverWhite;
             color:#000;
             &:before {

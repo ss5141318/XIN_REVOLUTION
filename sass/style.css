@@ -3783,12 +3783,12 @@ footer {
   margin: 0 0.3rem;
 }
 
-.btn.btnSquare:hover {
+.btn.btnSquare:hover, .btn.btnSquare:active {
   background: rgba(255, 255, 255, 0.8);
   color: #000;
 }
 
-.btn.btnSquare:hover:before {
+.btn.btnSquare:hover:before, .btn.btnSquare:active:before {
   content: '';
   background: #000;
 }
