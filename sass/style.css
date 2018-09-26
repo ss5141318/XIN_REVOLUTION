@@ -3669,79 +3669,6 @@ html[dir="rtl"] .right {
   visibility: hidden;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  background: #d8d8d8;
-  position: relative;
-  overflow: hidden;
-}
-
-footer,
-header {
-  width: 100%;
-  position: fixed;
-  z-index: 1000;
-}
-
-header {
-  top: 0;
-}
-
-header div {
-  float: left;
-}
-
-footer {
-  bottom: 0;
-}
-
-.footerDiv {
-  position: fixed;
-  height: 10px;
-  bottom: 0;
-  left: 0;
-  width: calc(100% - 290px);
-  margin: 0 auto;
-  right: 0;
-  background: #292929;
-}
-
-.biseau {
-  position: absolute;
-  z-index: 10;
-  width: 258px;
-  height: 20px;
-  top: 20px;
-  left: 50%;
-  margin-left: -129px;
-  background: #292929;
-}
-
-.biseau:after, .biseau:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.biseau:before {
-  left: -20px;
-  border-width: 0 20px 20px 0;
-  border-color: transparent #292929 transparent transparent;
-}
-
-.biseau:after {
-  right: -20px;
-  border-width: 0 0 20px 20px;
-  border-color: transparent transparent transparent #292929;
-}
-
 .btn {
   /*--- 變數 ---*/
   /*-----------*/
@@ -3836,6 +3763,79 @@ footer {
   width: 0;
   height: 0;
   border-style: solid;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #d8d8d8;
+  position: relative;
+  overflow: hidden;
+}
+
+footer,
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+header {
+  top: 0;
+}
+
+header div {
+  float: left;
+}
+
+footer {
+  bottom: 0;
+}
+
+.footerDiv {
+  position: fixed;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 290px);
+  margin: 0 auto;
+  right: 0;
+  background: #292929;
+}
+
+.biseau {
+  position: absolute;
+  z-index: 10;
+  width: 258px;
+  height: 20px;
+  top: 20px;
+  left: 50%;
+  margin-left: -129px;
+  background: #292929;
+}
+
+.biseau:after, .biseau:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.biseau:before {
+  left: -20px;
+  border-width: 0 20px 20px 0;
+  border-color: transparent #292929 transparent transparent;
+}
+
+.biseau:after {
+  right: -20px;
+  border-width: 0 0 20px 20px;
+  border-color: transparent transparent transparent #292929;
 }
 
 .h100 {

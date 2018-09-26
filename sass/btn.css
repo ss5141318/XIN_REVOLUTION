@@ -1,0 +1,97 @@
+@charset "UTF-8";
+.btn {
+  /*--- 變數 ---*/
+  /*-----------*/
+  color: #fff;
+  display: inline-block;
+  line-height: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn.icon {
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+}
+
+.btn.icon:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+.btn.btnSquare {
+  width: 100%;
+}
+
+.btn.btnSquare:before {
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  display: inline-block;
+  margin: 0 0.3rem;
+}
+
+.btn.btnSquare:hover, .btn.btnSquare:active {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+.btn.btnSquare:hover:before, .btn.btnSquare:active:before {
+  content: '';
+  background: #000;
+}
+
+.btn.leftTop, .btn.rightTop, .btn.leftBottom, .btn.rightBottom {
+  width: 8rem;
+  padding: 10px 0.5rem;
+}
+
+.btn.leftTop, .btn.rightTop {
+  vertical-align: top;
+}
+
+.btn.leftBottom {
+  background: #292929;
+}
+
+.btn.leftBottom:after {
+  content: '';
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 8rem;
+  border-width: 0 40px 40px 0;
+  border-color: transparent transparent #292929 transparent;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.btn.rightBottom {
+  background: #292929;
+}
+
+.btn.rightBottom:before {
+  content: '';
+  top: auto;
+  right: 8rem;
+  bottom: 0;
+  left: auto;
+  border-width: 40px 40px 0 0;
+  border-color: transparent #292929 transparent transparent;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+/*# sourceMappingURL=btn.css.map */
