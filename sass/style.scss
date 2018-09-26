@@ -153,6 +153,13 @@ footer {
     }
 }
 
+.cardImg
+{
+    img{
+        width: 100%;
+
+    }
+}
 // 十字框線
 %crossDivLINE {
     content: '';
@@ -388,3 +395,4 @@ $sightPosition:-20px;
 }
 
 // ---------------------------------//
+

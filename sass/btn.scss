@@ -1,6 +1,12 @@
 @import 'mixin.scss';
 
 // 按鈕
+[class*="icon-"] {
+    background: red;
+}
+
+
+
 .btn {
     /*--- 變數 ---*/
     $width: 8rem;
@@ -28,6 +34,8 @@
             background: $hoverWhite;
             color: #000;
         }
+
+    
     }
 
     // 方形按鈕

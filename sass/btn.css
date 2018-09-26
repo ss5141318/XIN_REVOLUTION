@@ -1,4 +1,8 @@
 @charset "UTF-8";
+[class*="icon-"] {
+  background: red;
+}
+
 .btn {
   /*--- 變數 ---*/
   /*-----------*/
