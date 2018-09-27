@@ -14,28 +14,14 @@
   -moz-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   -ms-transition: all 0.5s ease 0s;
-  width: 20px;
-  height: 20px;
-  margin-right: 0.8rem;
+  font-size: 20px;
+  margin: 0 0.4rem;
+  color: #fff;
 }
 
 .btn[class*="icon-"]:hover {
+  color: #292929;
   background: rgba(255, 255, 255, 0.8);
-}
-
-.btn .icon-twitter {
-  background: url("../img/twitter-icon.svg");
-  background-size: 100%;
-}
-
-.btn .icon-fb {
-  background: url("../img/fb-icon.svg");
-  background-size: 100%;
-}
-
-.btn .icon-ig {
-  background: url("../img/ig-icon.svg");
-  background-size: 100%;
 }
 
 .btn.btnSquare {

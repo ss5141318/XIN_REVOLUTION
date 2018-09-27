@@ -1,8 +1,8 @@
 // @import 'reset';
 @import 'calcite-web.scss';
 @import'mixin.scss';
+@import'../style.css';
 @import 'btn.scss';
-
 
 
 * {
@@ -14,8 +14,6 @@ body {
     position: relative;
     overflow: hidden;
 }
-
-
 
 
 footer,

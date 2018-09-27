@@ -1,3 +1,4 @@
+@import url(/Users/X/Desktop/XIN_REVOLUTION/style.css);
 html {
   overflow-y: scroll;
   min-height: 100%;
@@ -3686,26 +3687,13 @@ html[dir="rtl"] .right {
   -ms-transition: all 0.5s ease 0s;
   width: 20px;
   height: 20px;
-  margin-right: 0.8rem;
+  margin: 0 0.4rem;
+  color: #fff;
 }
 
 .btn[class*="icon-"]:hover {
+  color: #292929;
   background: rgba(255, 255, 255, 0.8);
-}
-
-.btn .icon-twitter {
-  background: url("../img/twitter-icon.svg");
-  background-size: 100%;
-}
-
-.btn .icon-fb {
-  background: url("../img/fb-icon.svg");
-  background-size: 100%;
-}
-
-.btn .icon-ig {
-  background: url("../img/ig-icon.svg");
-  background-size: 100%;
 }
 
 .btn.btnSquare {
@@ -4135,4 +4123,4 @@ footer {
   top: 0;
   left: 0;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=myScss.css.map */

@@ -20,27 +20,13 @@
 
     &[class*="icon-"] {
         @include transition;
-        width: 20px;
-        height: 20px;
-        margin-right: 0.8rem;
+        font-size: 20px;
+        margin: 0 0.4rem;
+        color: #fff;
         &:hover {
+            color: $black;
             background: $hoverWhite;
         }
-    }
-
-    .icon-twitter {
-        background: url('../img/twitter-icon.svg');
-        background-size: 100%;  
-    }
-
-    .icon-fb {
-        background: url('../img/fb-icon.svg');
-        background-size: 100%;
-    }
-
-    .icon-ig {
-        background: url('../img/ig-icon.svg');
-        background-size: 100%;
     }
 
     // 方形按鈕
