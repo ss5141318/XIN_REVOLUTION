@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url(/Users/X/Desktop/XIN_REVOLUTION/sass/style.css);
-@import url(/Users/X/Desktop/XIN_REVOLUTION/sass/hamburgers.css);
+@import url(/Users/X/Desktop/XIN_REVOLUTION/css/hamburgers.css);
+@import url(/Users/X/Desktop/XIN_REVOLUTION/css/style.css);
 html {
   overflow-y: scroll;
   min-height: 100%;
@@ -3733,6 +3733,11 @@ html[dir="rtl"] .right {
 
 .btn.leftTop, .btn.rightTop {
   vertical-align: top;
+}
+
+.btn.rightTop [class*="icon-"]:hover {
+  color: #292929;
+  background: none;
 }
 
 .btn.leftTop {
