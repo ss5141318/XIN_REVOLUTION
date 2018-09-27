@@ -3735,6 +3735,11 @@ html[dir="rtl"] .right {
   vertical-align: top;
 }
 
+.btn.rightTop [class*="icon-"]:hover {
+  color: #292929;
+  background: none;
+}
+
 .btn.leftTop {
   padding: 0;
 }

@@ -93,16 +93,29 @@
         vertical-align: top;
     }
 
-    &.leftTop{
+    &.rightTop {
+        [class*="icon-"] {
+          
+            &:hover {
+                color: $black;
+                background: none;
+            }
+        }
+    }
+
+    &.leftTop {
         padding: 0;
     }
+
     &.leftBottom {
         background: $black;
+
         &:after {
 
             @include biseauMixin(auto, auto, 0, $width, 0 $angle $angle 0, transparent transparent $black transparent);
         }
     }
+
 
     &.rightBottom {
         background: $black;
