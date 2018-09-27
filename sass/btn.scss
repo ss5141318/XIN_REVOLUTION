@@ -23,6 +23,7 @@
         font-size: 20px;
         margin: 0 0.4rem;
         color: #fff;
+
         &:hover {
             color: $black;
             background: $hoverWhite;
@@ -92,9 +93,11 @@
         vertical-align: top;
     }
 
+    &.leftTop{
+        padding: 0;
+    }
     &.leftBottom {
         background: $black;
-
         &:after {
 
             @include biseauMixin(auto, auto, 0, $width, 0 $angle $angle 0, transparent transparent $black transparent);
@@ -103,6 +106,7 @@
 
     &.rightBottom {
         background: $black;
+
         &:before {
             @include biseauMixin(auto, $width, 0, auto, $angle $angle 0 0, transparent $black transparent transparent);
         }
