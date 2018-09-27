@@ -1,26 +1,41 @@
-@charset "UTF-8";
 .btn {
-  /*--- 變數 ---*/
-  /*-----------*/
   color: #fff;
   display: inline-block;
   line-height: 20px;
   font-size: 0.8rem;
   cursor: pointer;
+  /*--- var ---*/
+  /*-----------*/
 }
 
 .btn[class*="icon-"] {
-  background: red;
   transition: all 0.5s ease 0s;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   -ms-transition: all 0.5s ease 0s;
+  width: 20px;
+  height: 20px;
+  margin-right: 0.8rem;
 }
 
 .btn[class*="icon-"]:hover {
   background: rgba(255, 255, 255, 0.8);
-  color: #000;
+}
+
+.btn .icon-twitter {
+  background: url("../img/twitter-icon.svg");
+  background-size: 100%;
+}
+
+.btn .icon-fb {
+  background: url("../img/fb-icon.svg");
+  background-size: 100%;
+}
+
+.btn .icon-ig {
+  background: url("../img/ig-icon.svg");
+  background-size: 100%;
 }
 
 .btn.btnSquare {
@@ -53,6 +68,7 @@
 
 .btn.leftTop, .btn.rightTop, .btn.leftBottom, .btn.rightBottom {
   width: 8rem;
+  height: 40px;
   padding: 10px 0.5rem;
 }
 

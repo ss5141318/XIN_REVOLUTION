@@ -3,12 +3,7 @@
 // 按鈕
 
 .btn {
-    /*--- 變數 ---*/
-    $width: 8rem;
-    $height: 40px;
-    $angle: 40px;
     $hoverWhite: rgba(255, 255, 255, 0.8);
-    /*-----------*/
     color: #fff;
     display: inline-block;
     line-height: 20px;
@@ -24,15 +19,28 @@
     //     }
 
     &[class*="icon-"] {
-        background: red;
         @include transition;
-
+        width: 20px;
+        height: 20px;
+        margin-right: 0.8rem;
         &:hover {
             background: $hoverWhite;
-            color: #000;
         }
+    }
 
+    .icon-twitter {
+        background: url('../img/twitter-icon.svg');
+        background-size: 100%;  
+    }
 
+    .icon-fb {
+        background: url('../img/fb-icon.svg');
+        background-size: 100%;
+    }
+
+    .icon-ig {
+        background: url('../img/ig-icon.svg');
+        background-size: 100%;
     }
 
     // 方形按鈕
@@ -64,7 +72,12 @@
     }
 
     // 梯形按鈕
+    /*--- var ---*/
+    $width: 8rem;
+    $height: 40px;
+    $angle: 40px;
 
+    /*-----------*/
     @mixin biseauMixin($top:auto, $right:auto, $bottom:auto, $left:auto, $border-width:0 0 0 0, $border-color:transparent) {
         content: '';
         top: $top;
@@ -84,6 +97,7 @@
     &.leftBottom,
     &.rightBottom {
         width: $width;
+        height: $height;
         padding: 10px 0.5rem;
     }
 
@@ -103,7 +117,6 @@
 
     &.rightBottom {
         background: $black;
-
         &:before {
             @include biseauMixin(auto, $width, 0, auto, $angle $angle 0 0, transparent $black transparent transparent);
         }
