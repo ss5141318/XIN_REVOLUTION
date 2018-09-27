@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(/Users/X/Desktop/XIN_REVOLUTION/style.css);
+@import url(/Users/X/Desktop/XIN_REVOLUTION/hamburgers.css);
 html {
   overflow-y: scroll;
   min-height: 100%;
@@ -3669,6 +3671,110 @@ html[dir="rtl"] .right {
   visibility: hidden;
 }
 
+.btn {
+  color: #fff;
+  display: inline-block;
+  line-height: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  /*--- var ---*/
+  /*-----------*/
+}
+
+.btn[class*="icon-"] {
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  font-size: 20px;
+  margin: 0 0.4rem;
+  color: #fff;
+}
+
+.btn[class*="icon-"]:hover {
+  color: #292929;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.btn.btnSquare {
+  width: 100%;
+}
+
+.btn.btnSquare:before {
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  display: inline-block;
+  margin: 0 0.3rem;
+}
+
+.btn.btnSquare:hover, .btn.btnSquare:active {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+.btn.btnSquare:hover:before, .btn.btnSquare:active:before {
+  content: '';
+  background: #000;
+}
+
+.btn.leftTop, .btn.rightTop, .btn.leftBottom, .btn.rightBottom {
+  width: 8rem;
+  height: 40px;
+  padding: 10px 0.5rem;
+}
+
+.btn.leftTop, .btn.rightTop {
+  vertical-align: top;
+}
+
+.btn.leftTop {
+  padding: 0;
+}
+
+.btn.leftBottom {
+  background: #292929;
+}
+
+.btn.leftBottom:after {
+  content: '';
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 8rem;
+  border-width: 0 40px 40px 0;
+  border-color: transparent transparent #292929 transparent;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.btn.rightBottom {
+  background: #292929;
+}
+
+.btn.rightBottom:before {
+  content: '';
+  top: auto;
+  right: 8rem;
+  bottom: 0;
+  left: auto;
+  border-width: 40px 40px 0 0;
+  border-color: transparent #292929 transparent transparent;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3677,16 +3783,7 @@ html[dir="rtl"] .right {
 body {
   background: #d8d8d8;
   position: relative;
-}
-
-.container {
-  border: 1px solid #f00;
-  position: absolute;
-  margin: 1rem;
-}
-
-.container:hover {
-  background: #ffffff;
+  overflow: hidden;
 }
 
 footer,
@@ -3706,6 +3803,8 @@ header div {
 
 footer {
   bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .footerDiv {
@@ -3751,68 +3850,12 @@ footer {
   border-color: transparent transparent transparent #292929;
 }
 
-.btn {
-  /*--- 變數 ---*/
-  /*-----------*/
-  width: 8rem;
-  color: #fff;
-  display: inline-block;
-  line-height: 20px;
-  padding: 10px;
+.h100 {
+  height: 100%;
 }
 
-.btn.leftTop, .btn.rightTop {
-  vertical-align: top;
-}
-
-.btn.leftBottom {
-  background: #292929;
-}
-
-.btn.leftBottom:after {
-  content: '';
-  top: auto;
-  right: auto;
-  bottom: 0;
-  left: 8rem;
-  border-width: 0 40px 40px 0;
-  border-color: transparent transparent #292929 transparent;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.btn.rightBottom {
-  background: #292929;
-}
-
-.btn.rightBottom:before {
-  content: '';
-  top: auto;
-  right: 8rem;
-  bottom: 0;
-  left: auto;
-  border-width: 40px 40px 0 0;
-  border-color: transparent #292929 transparent transparent;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.corner {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.corner-top-left {
-  border-bottom: none;
-  border-right: none;
-  top: 0;
-  left: 0;
+.right {
+  float: right;
 }
 
 .relative {
@@ -3822,6 +3865,90 @@ footer {
 .wrapper {
   height: 100vh;
   position: relative;
+  overflow: auto;
+}
+
+.content {
+  height: 100%;
+  padding-top: calc(0.5rem + 40px);
+  padding-bottom: calc(0.5rem + 40px);
+  position: relative;
+  z-index: 999;
+  width: 100%;
+}
+
+.content.horizontalScroll {
+  white-space: nowrap;
+}
+
+.newsDiv {
+  background: rgba(0, 0, 0, 0.5);
+  height: calc((100% - 1rem) / 3);
+  margin: 0 -0.5rem 0.5rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dateDiv {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.5);
+  height: calc((100% - 0.5rem) / 2);
+}
+
+.dateDiv:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.workDiv {
+  background: rgba(0, 0, 0, 0.5);
+  height: 200px;
+  display: inline-block;
+  position: relative;
+  float: none;
+  vertical-align: middle;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 200;
+  margin-right: calc(0.5rem - 4px);
+}
+
+.workDiv:first-child {
+  margin-left: 0.5rem;
+}
+
+.cardImg img {
+  width: 100%;
+}
+
+.crossDiv div:after, .crossDiv div:nth-child(1):before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: calc(100% + 40px);
+  background: rgba(255, 255, 255, 0.4);
+  top: -40px;
+}
+
+.crossDiv {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 1;
+}
+
+.crossDiv div {
+  height: 100%;
+  padding-top: calc(0.5rem + 40px);
+  padding-bottom: calc(0.5rem + 40px);
+  position: relative;
+}
+
+.crossDiv div:after {
+  right: 0;
+}
+
+.crossDiv div:nth-child(1):before {
+  left: 0;
 }
 
 .masterVision {
@@ -3830,27 +3957,6 @@ footer {
   overflow: hidden;
   height: 100%;
   width: 100%;
-}
-
-.crossDiv {
-  border-right: 1px solid rgba(255, 255, 255, 0.4);
-  height: 100%;
-}
-
-.crossDiv:first-child {
-  border-left: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.h100 {
-  height: 100%;
-}
-
-.icon {
-  display: inline-block;
-}
-
-.right {
-  float: right;
 }
 
 .adj {
@@ -3871,98 +3977,6 @@ footer {
   width: 100%;
   height: 50%;
   bottom: 0;
-}
-
-.logo {
-  display: inline-block;
-  width: calc(100% - 16rem);
-  padding-top: 10px;
-  vertical-align: top;
-}
-
-.logo .index {
-  display: block;
-  margin: auto;
-  position: relative;
-  float: none;
-  width: 30%;
-}
-
-.logo .index img {
-  display: block;
-  margin: auto;
-}
-
-.sight {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-}
-
-.sight .bottomSight,
-.sight .topSight {
-  width: 100%;
-  height: 40px;
-  position: absolute;
-}
-
-.sight .topSight {
-  top: 0;
-}
-
-.sight .topSight:after, .sight .topSight:before {
-  content: '';
-  bottom: -140%;
-  top: auto;
-  height: 20px;
-  width: 20rem;
-  background-size: 100%;
-  position: absolute;
-}
-
-.sight .topSight:before {
-  background: url("../img/topLeftSight.svg") no-repeat center top;
-  left: 22%;
-}
-
-.sight .topSight:after {
-  background: url("../img/topRightSight.svg") no-repeat center top;
-  right: 22%;
-}
-
-.sight .bottomSight {
-  bottom: 0;
-}
-
-.sight .bottomSight:after, .sight .bottomSight:before {
-  content: '';
-  bottom: auto;
-  top: -140%;
-  height: 20px;
-  width: 20rem;
-  background-size: 100%;
-  position: absolute;
-}
-
-.sight .bottomSight:before {
-  background: url("../img/bottomLeftSight.svg") no-repeat center bottom;
-  left: 22%;
-}
-
-.sight .bottomSight:after {
-  background: url("../img/bottomRightSight.svg") no-repeat center bottom;
-  right: 22%;
-}
-
-.logoImg {
-  position: relative;
-  margin: 20% auto;
-  display: block;
-  z-index: 100;
-  width: 18%;
-  mix-blend-mode: difference;
 }
 
 .logoDiv {
@@ -4012,4 +4026,123 @@ footer {
   background-size: 3px 3px;
   z-index: 3;
 }
-/*# sourceMappingURL=style.css.map */
+
+.logo {
+  display: inline-block;
+  width: calc(100% - 16rem);
+  padding-top: 10px;
+  vertical-align: top;
+  mix-blend-mode: difference;
+}
+
+.logo .index {
+  display: block;
+  margin: auto;
+  position: relative;
+  float: none;
+  width: 4%;
+}
+
+.logo .index img {
+  display: block;
+  margin: auto;
+}
+
+.bottomSight,
+.topSight {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  z-index: 900;
+}
+
+.topSight {
+  top: 0;
+}
+
+.topSight:after, .topSight:before {
+  content: "";
+  bottom: -20px;
+  top: auto;
+  height: 20px;
+  width: 20rem;
+  background-size: 100%;
+  position: absolute;
+  mix-blend-mode: difference;
+}
+
+.topSight:before {
+  background: url("../img/topLeftSight.svg") no-repeat center top;
+  left: 22%;
+}
+
+.topSight:after {
+  background: url("../img/topRightSight.svg") no-repeat center top;
+  right: 22%;
+}
+
+.bottomSight {
+  bottom: 0;
+}
+
+.bottomSight:before, .bottomSight:after {
+  mix-blend-mode: difference;
+  color: rgba(191, 191, 191, 0.6);
+  font-size: 0.5rem;
+}
+
+.bottomSight:before {
+  background: url("../img/bottomLeftSight.svg") no-repeat center bottom;
+  left: 22%;
+  content: "23.973875°N";
+  bottom: auto;
+  top: -20px;
+  height: 20px;
+  width: 20rem;
+  background-size: 100%;
+  position: absolute;
+  mix-blend-mode: difference;
+}
+
+.bottomSight:after {
+  text-align: right;
+  background: url("../img/bottomRightSight.svg") no-repeat center bottom;
+  right: 22%;
+  content: "120.982024°E";
+  bottom: auto;
+  top: -20px;
+  height: 20px;
+  width: 20rem;
+  background-size: 100%;
+  position: absolute;
+  mix-blend-mode: difference;
+}
+
+.logoImg {
+  position: relative;
+  margin: 20% auto;
+  display: block;
+  z-index: 100;
+  width: 18%;
+  mix-blend-mode: difference;
+}
+
+.logoImg.icon-logo {
+  color: #fff;
+  font-size: 5rem;
+}
+
+.corner {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.corner-top-left {
+  border-bottom: none;
+  border-right: none;
+  top: 0;
+  left: 0;
+}
+/*# sourceMappingURL=myScss.css.map */

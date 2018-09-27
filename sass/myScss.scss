@@ -1,0 +1,403 @@
+// @import 'reset';
+@import 'calcite-web.scss';
+@import'mixin.scss';
+@import'../style.css';
+@import'../hamburgers.css';
+@import 'btn.scss';
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #d8d8d8;
+    position: relative;
+    overflow: hidden;
+}
+
+
+footer,
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+header {
+    top: 0;
+
+    div {
+        float: left;
+    }
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.footerDiv {
+    position: fixed;
+    height: 10px;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 290px);
+    margin: 0 auto;
+    right: 0;
+    background: $black;
+}
+
+.biseau {
+    position: absolute;
+    z-index: 10;
+    width: 258px;
+    height: 20px;
+    top: 20px;
+    left: 50%;
+    margin-left: -129px;
+    background: $black;
+
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+
+    &:before {
+        left: -20px;
+        border-width: 0 20px 20px 0;
+        border-color: transparent $black transparent transparent;
+    }
+
+    &:after {
+        right: -20px;
+        border-width: 0 0 20px 20px;
+        border-color: transparent transparent transparent $black;
+    }
+}
+
+
+
+// custom
+.h100 {
+    height: 100%;
+}
+
+.right {
+    float: right;
+}
+
+.relative {
+    position: relative;
+}
+
+.wrapper {
+    height: 100vh;
+    position: relative;
+    overflow: auto;
+}
+
+// 內容
+.content {
+    height: 100%;
+    padding-top: calc(0.5rem + 40px);
+    padding-bottom: calc(0.5rem + 40px);
+    position: relative;
+    z-index: 999;
+    width: 100%;
+
+    &.horizontalScroll {
+        white-space: nowrap;
+    }
+}
+
+.newsDiv {
+    background: rgba(0, 0, 0, 0.5);
+    height: calc((100% - 1rem) / 3);
+    margin: 0 -0.5rem 0.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dateDiv {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.5);
+    height: calc((100% - 0.5rem) / 2);
+
+    &:first-child {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.workDiv {
+    background: rgba(0, 0, 0, 0.5);
+    // width: 18rem;
+    height: 200px;
+    display: inline-block;
+    position: relative;
+    float: none;
+    vertical-align: middle;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 200;
+    margin-right: calc(0.5rem - 4px);
+
+    &:first-child {
+        margin-left: 0.5rem;
+    }
+}
+
+.cardImg {
+    img {
+        width: 100%;
+
+    }
+}
+
+// 十字框線
+%crossDivLINE {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: calc(100% + 40px);
+    background: $lineColor;
+    top: -40px;
+}
+
+//--------------------//
+.crossDiv {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+
+    div {
+        height: 100%;
+        padding-top: calc(0.5rem + 40px);
+        padding-bottom: calc(0.5rem + 40px);
+        position: relative;
+
+        &:after {
+            @extend %crossDivLINE;
+            right: 0;
+        }
+
+        &:nth-child(1):before {
+            @extend %crossDivLINE;
+            left: 0;
+        }
+    }
+}
+
+
+
+// 主視覺
+.masterVision {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.adj {
+    mix-blend-mode: difference;
+    /*    background-image: linear-gradient(149deg, #cacaca, #a4a4a4 29%, #4a3c3c);*/
+    // background-image: linear-gradient(149deg, #eaeaea, #a4a4a4 29%, #4a3c3c);
+    background-image: linear-gradient(1234deg, #ffffff45, #90989a 29%, #000000);
+    width: 100%;
+    height: 100%;
+    /*    background: red;*/
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.bgRed {
+    // background-image: radial-gradient(circle at 104% 155%, #300b0b, #461b1b 10%, #ff9f9f);
+    // background-image: radial-gradient(circle at 1700% 200%, #300b0b, #000000 10%, #ffb3b7);
+    background-image: radial-gradient(circle at 20% -50%, #6d1717, #0b524c 10%, #000000);
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+}
+
+.logoDiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.moon {
+    background: url("../img/moon.png") no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 60rem;
+    background-blend-mode: difference;
+    position: absolute;
+    z-index: 1;
+    top: -30%;
+    left: 20%;
+
+}
+
+.wing {
+    background: url("../img/wing.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    transform: rotateZ(-10deg);
+    width: 100%;
+    height: 65rem;
+    right: -50%;
+    top: 0;
+}
+
+.video:before {
+    position: absolute;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    content: "";
+    clear: both;
+    display: block;
+    background: url("../img/screen.png") center center repeat;
+    -webkit-background-size: 3px 3px;
+    -moz-background-size: 3px 3px;
+    -ms-background-size: 3px 3px;
+    -o-background-size: 3px 3px;
+    background-size: 3px 3px;
+    z-index: 3;
+}
+
+
+.logo {
+    display: inline-block;
+    width: calc(100% - 16rem);
+    padding-top: 10px;
+    vertical-align: top;
+    mix-blend-mode: difference;
+
+    .index {
+        display: block;
+        margin: auto;
+        position: relative;
+        float: none;
+        width: 4%;
+
+        img {
+            display: block;
+            margin: auto;
+            // mix-blend-mode: difference;
+        }
+    }
+}
+
+// 瞄準鏡 座標
+
+.bottomSight,
+.topSight {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    z-index: 900;
+}
+
+$positon: 22%;
+$sightPosition:-20px;
+
+@mixin sight($coordinate:'', $top:auto, $bottom:auto) {
+    content: $coordinate;
+    bottom: $bottom;
+    top: $top;
+    height: 20px;
+    width: 20rem;
+    background-size: 100%;
+    position: absolute;
+    mix-blend-mode: difference;
+}
+
+//-----------23.973875°N 120.982024°E--------//
+.topSight {
+    top: 0;
+
+    &:after,
+    &:before {
+        @include sight($bottom: $sightPosition)
+    }
+
+    &:before {
+        background: url("../img/topLeftSight.svg")no-repeat center top;
+        left: $positon;
+    }
+
+    &:after {
+        background: url("../img/topRightSight.svg")no-repeat center top;
+        right: $positon;
+    }
+}
+
+.bottomSight {
+    bottom: 0;
+
+    &:before,
+    &:after {
+        mix-blend-mode: difference;
+        color:$gray;
+        font-size: 0.5rem;
+    }
+
+    &:before {
+        background: url("../img/bottomLeftSight.svg")no-repeat center bottom;
+        left: $positon;
+        @include sight($coordinate: '23.973875°N', $top: $sightPosition)
+    }
+
+    &:after {
+        text-align: right;
+        background: url("../img/bottomRightSight.svg")no-repeat center bottom;
+        right: $positon;
+        @include sight($coordinate: '120.982024°E', $top: $sightPosition)
+    }
+}
+
+.logoImg {
+    position: relative;
+    margin: 20% auto;
+    display: block;
+    z-index: 100;
+    width: 18%;
+    mix-blend-mode: difference;
+    &.icon-logo{
+        color: #fff;
+        font-size:5rem;
+    }
+}
+
+// 瞄準方框
+
+.corner {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border: 1px solid $lineColor;
+}
+
+.corner-top-left {
+    border-bottom: none;
+    border-right: none;
+    top: 0;
+    left: 0;
+}
+
+// ---------------------------------//
