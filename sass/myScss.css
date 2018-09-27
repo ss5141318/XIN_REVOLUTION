@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(/Users/X/Desktop/XIN_REVOLUTION/style.css);
 html {
   overflow-y: scroll;
@@ -4047,7 +4048,7 @@ footer {
   width: 100%;
   height: 40px;
   position: fixed;
-  z-index: 1000;
+  z-index: 900;
 }
 
 .topSight {
@@ -4055,7 +4056,7 @@ footer {
 }
 
 .topSight:after, .topSight:before {
-  content: '';
+  content: "";
   bottom: -20px;
   top: auto;
   height: 20px;
@@ -4079,8 +4080,16 @@ footer {
   bottom: 0;
 }
 
-.bottomSight:after, .bottomSight:before {
-  content: '';
+.bottomSight:before, .bottomSight:after {
+  mix-blend-mode: difference;
+  color: rgba(191, 191, 191, 0.6);
+  font-size: 0.5rem;
+}
+
+.bottomSight:before {
+  background: url("../img/bottomLeftSight.svg") no-repeat center bottom;
+  left: 22%;
+  content: "23.973875°N";
   bottom: auto;
   top: -20px;
   height: 20px;
@@ -4090,14 +4099,18 @@ footer {
   mix-blend-mode: difference;
 }
 
-.bottomSight:before {
-  background: url("../img/bottomLeftSight.svg") no-repeat center bottom;
-  left: 22%;
-}
-
 .bottomSight:after {
+  text-align: right;
   background: url("../img/bottomRightSight.svg") no-repeat center bottom;
   right: 22%;
+  content: "120.982024°E";
+  bottom: auto;
+  top: -20px;
+  height: 20px;
+  width: 20rem;
+  background-size: 100%;
+  position: absolute;
+  mix-blend-mode: difference;
 }
 
 .logoImg {
@@ -4107,6 +4120,11 @@ footer {
   z-index: 100;
   width: 18%;
   mix-blend-mode: difference;
+}
+
+.logoImg.icon-logo {
+  color: #fff;
+  font-size: 10rem;
 }
 
 .corner {

@@ -25,6 +25,7 @@ header {
 
 header {
     top: 0;
+
     div {
         float: left;
     }
@@ -145,18 +146,19 @@ footer {
     transform: translateY(-50%);
     z-index: 200;
     margin-right: calc(0.5rem - 4px);
+
     &:first-child {
         margin-left: 0.5rem;
     }
 }
 
-.cardImg
-{
-    img{
+.cardImg {
+    img {
         width: 100%;
 
     }
 }
+
 // 十字框線
 %crossDivLINE {
     content: '';
@@ -307,14 +309,14 @@ footer {
     width: 100%;
     height: 40px;
     position: fixed;
-    z-index: 1000;
+    z-index: 900;
 }
 
 $positon: 22%;
 $sightPosition:-20px;
 
-@mixin sight($top:auto, $bottom:auto) {
-    content: '';
+@mixin sight($coordinate:'', $top:auto, $bottom:auto) {
+    content: $coordinate;
     bottom: $bottom;
     top: $top;
     height: 20px;
@@ -324,7 +326,7 @@ $sightPosition:-20px;
     mix-blend-mode: difference;
 }
 
-//-------------------//
+//-----------23.973875°N 120.982024°E--------//
 .topSight {
     top: 0;
 
@@ -347,19 +349,24 @@ $sightPosition:-20px;
 .bottomSight {
     bottom: 0;
 
-    &:after,
-    &:before {
-        @include sight($top: $sightPosition)
+    &:before,
+    &:after {
+        mix-blend-mode: difference;
+        color:$gray;
+        font-size: 0.5rem;
     }
 
     &:before {
         background: url("../img/bottomLeftSight.svg")no-repeat center bottom;
         left: $positon;
+        @include sight($coordinate: '23.973875°N', $top: $sightPosition)
     }
 
     &:after {
+        text-align: right;
         background: url("../img/bottomRightSight.svg")no-repeat center bottom;
         right: $positon;
+        @include sight($coordinate: '120.982024°E', $top: $sightPosition)
     }
 }
 
@@ -370,6 +377,10 @@ $sightPosition:-20px;
     z-index: 100;
     width: 18%;
     mix-blend-mode: difference;
+    &.icon-logo{
+        color: #fff;
+        font-size:10rem;
+    }
 }
 
 // 瞄準方框
@@ -389,4 +400,3 @@ $sightPosition:-20px;
 }
 
 // ---------------------------------//
-
