@@ -3685,8 +3685,7 @@ html[dir="rtl"] .right {
   -moz-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   -ms-transition: all 0.5s ease 0s;
-  width: 20px;
-  height: 20px;
+  font-size: 20px;
   margin: 0 0.4rem;
   color: #fff;
 }
