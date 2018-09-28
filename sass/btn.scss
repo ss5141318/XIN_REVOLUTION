@@ -65,19 +65,19 @@
     $angle: 40px;
 
     /*-----------*/
-    @mixin biseauMixin($top:auto, $right:auto, $bottom:auto, $left:auto, $border-width:0 0 0 0, $border-color:transparent) {
-        content: '';
-        top: $top;
-        right: $right;
-        bottom: $bottom;
-        left: $left;
-        border-width: $border-width;
-        border-color: $border-color;
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-style: solid;
-    }
+    // @mixin biseauMixin($top:auto, $right:auto, $bottom:auto, $left:auto, $border-width:0 0 0 0, $border-color:transparent) {
+    //     content: '';
+    //     top: $top;
+    //     right: $right;
+    //     bottom: $bottom;
+    //     left: $left;
+    //     border-width: $border-width;
+    //     border-color: $border-color;
+    //     position: absolute;
+    //     width: 0;
+    //     height: 0;
+    //     border-style: solid;
+    // }
 
     &.leftTop,
     &.rightTop,
@@ -95,7 +95,7 @@
 
     &.rightTop {
         [class*="icon-"] {
-          
+
             &:hover {
                 color: $black;
                 background: none;
@@ -108,20 +108,36 @@
     }
 
     &.leftBottom {
-        background: $black;
+
 
         &:after {
-
-            @include biseauMixin(auto, auto, 0, $width, 0 $angle $angle 0, transparent transparent $black transparent);
+            background: $black;
+            // @include biseauMixin(auto, auto, 0, $width, 0 $angle $angle 0, transparent transparent $black transparent);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            width: 11rem;
+            height: 138.9%;
+            border-top-right-radius: 8px;
+            content: "";
+            -webkit-transform: perspective(5px) rotateX(2deg);
+            -webkit-transform-origin: bottom;
+            -moz-transform: perspective(5px) rotateX(2deg);
+            -moz-transform-origin: bottom;
+            transform: perspective(5px) rotateX(2deg);
+            transform-origin: bottom left;
         }
+
     }
 
 
     &.rightBottom {
-        background: $black;
+
 
         &:before {
-            @include biseauMixin(auto, $width, 0, auto, $angle $angle 0 0, transparent $black transparent transparent);
+            // @include biseauMixin(auto, $width, 0, auto, $angle $angle 0 0, transparent $black transparent transparent);
         }
     }
 

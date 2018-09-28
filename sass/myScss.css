@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url(./css/hamburgers.css);
-@import url(./css/style.css);
+@import url(/Users/X/Desktop/XIN_REVOLUTION/sass/css/hamburgers.css);
+@import url(/Users/X/Desktop/XIN_REVOLUTION/sass/css/style.css);
 html {
   overflow-y: scroll;
   min-height: 100%;
@@ -3744,40 +3744,24 @@ html[dir="rtl"] .right {
   padding: 0;
 }
 
-.btn.leftBottom {
-  background: #292929;
-}
-
 .btn.leftBottom:after {
-  content: '';
-  top: auto;
-  right: auto;
-  bottom: 0;
-  left: 8rem;
-  border-width: 0 40px 40px 0;
-  border-color: transparent transparent #292929 transparent;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.btn.rightBottom {
   background: #292929;
-}
-
-.btn.rightBottom:before {
-  content: '';
-  top: auto;
-  right: 8rem;
-  bottom: 0;
-  left: auto;
-  border-width: 40px 40px 0 0;
-  border-color: transparent #292929 transparent transparent;
   position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 11rem;
+  height: 138.9%;
+  border-top-right-radius: 8px;
+  content: "";
+  -webkit-transform: perspective(5px) rotateX(2deg);
+  -webkit-transform-origin: bottom;
+  -moz-transform: perspective(5px) rotateX(2deg);
+  -moz-transform-origin: bottom;
+  transform: perspective(5px) rotateX(2deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 * {
@@ -3821,38 +3805,6 @@ footer {
   margin: 0 auto;
   right: 0;
   background: #292929;
-}
-
-.biseau {
-  position: absolute;
-  z-index: 10;
-  width: 258px;
-  height: 20px;
-  top: 20px;
-  left: 50%;
-  margin-left: -129px;
-  background: #292929;
-}
-
-.biseau:after, .biseau:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.biseau:before {
-  left: -20px;
-  border-width: 0 20px 20px 0;
-  border-color: transparent #292929 transparent transparent;
-}
-
-.biseau:after {
-  right: -20px;
-  border-width: 0 0 20px 20px;
-  border-color: transparent transparent transparent #292929;
 }
 
 .h100 {

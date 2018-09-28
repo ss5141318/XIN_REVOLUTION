@@ -50,41 +50,6 @@ footer {
     background: $black;
 }
 
-.biseau {
-    position: absolute;
-    z-index: 10;
-    width: 258px;
-    height: 20px;
-    top: 20px;
-    left: 50%;
-    margin-left: -129px;
-    background: $black;
-
-    &:after,
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        width: 0;
-        height: 0;
-        border-style: solid;
-    }
-
-    &:before {
-        left: -20px;
-        border-width: 0 20px 20px 0;
-        border-color: transparent $black transparent transparent;
-    }
-
-    &:after {
-        right: -20px;
-        border-width: 0 0 20px 20px;
-        border-color: transparent transparent transparent $black;
-    }
-}
-
-
-
 // custom
 .h100 {
     height: 100%;
