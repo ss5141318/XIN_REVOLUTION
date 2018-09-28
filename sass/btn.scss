@@ -78,6 +78,24 @@
     //     height: 0;
     //     border-style: solid;
     // }
+    @mixin biseauMixin($transform-origin:bottom left,$left:auto, $right:auto, $radius:0 8px 0 0) {
+        content: "";
+        background: $black;
+        position: absolute;
+        left: $left;
+        bottom: 0;
+        right: $right;
+        z-index: -1;
+        width: 11rem;
+        height: 138.9%;
+        border-radius: $radius;
+        -webkit-transform: perspective(5px) rotateX(2deg);
+        -webkit-transform-origin: bottom;
+        -moz-transform: perspective(5px) rotateX(2deg);
+        -moz-transform-origin: bottom;
+        transform: perspective(5px) rotateX(2deg);
+        transform-origin: $transform-origin;
+    }
 
     &.leftTop,
     &.rightTop,
@@ -109,34 +127,15 @@
 
     &.leftBottom {
 
-
         &:after {
-            background: $black;
-            // @include biseauMixin(auto, auto, 0, $width, 0 $angle $angle 0, transparent transparent $black transparent);
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            z-index: -1;
-            width: 11rem;
-            height: 138.9%;
-            border-top-right-radius: 8px;
-            content: "";
-            -webkit-transform: perspective(5px) rotateX(2deg);
-            -webkit-transform-origin: bottom;
-            -moz-transform: perspective(5px) rotateX(2deg);
-            -moz-transform-origin: bottom;
-            transform: perspective(5px) rotateX(2deg);
-            transform-origin: bottom left;
+            @include biseauMixin($left:0);
         }
 
     }
 
-
     &.rightBottom {
-
-
-        &:before {
+        &:after {
+            @include biseauMixin($transform-origin:bottom right,$right:0,$radius:8px 0 0 0 );
             // @include biseauMixin(auto, $width, 0, auto, $angle $angle 0 0, transparent $black transparent transparent);
         }
     }
