@@ -16,7 +16,7 @@
                     <div class="hamburger-inner"></div>
                 </div>
             </div>
-  
+
         </div>
         </div>
         </div>
@@ -25,7 +25,6 @@
                 <img src="img/X-logo.png" alt="">
             </div>
         </div>
-        <!-- <div class="biseau"></div> -->
         <nav class="btn borderBottom rightTop">
             <section>
                 <a class="btn icon-account"></a>
@@ -35,7 +34,6 @@
         </nav>
     </header>
     <div class="wrapper">
-
         <!-- <div class="video"></div> -->
         <!-- <div class="masterVision">
             <div class="logoDiv">
@@ -59,17 +57,17 @@
         <div class="grid-container h100 relative ">
             <div class="content horizontalScroll">
                 <!-- NEWS -->
-                <div class="column-18 h100">
+                <!-- <div class="column-18 h100">
                     <div class="newsDiv"></div>
                         <div class="newsDiv"></div>
                         <div class="newsDiv"></div>
                         <div class="newsDiv"></div> 
                     </div>
                     <div class="column-6 h100"><div class="dateDiv"></div> <div class="dateDiv"></div> </div>
-                </div>
+                </div> -->
 
                 <!-- WORKS -->
-                <!-- <div class="workDiv column-6 ">
+                <div class="workDiv column-6 ">
                     <div class="cardImg">
                         <img src="img/concept.png" alt="">
                     </div>
@@ -80,7 +78,7 @@
                 <div class="workDiv column-6 "></div>
                 <div class="workDiv column-6 "></div>
                 <div class="workDiv column-6 "></div>
-                <div class="workDiv column-6 "></div> -->
+                <div class="workDiv column-6 "></div>
                 <!-- 內容底線 -->
                 <div class="crossDiv">
                     <div class="column-6 "></div>
@@ -116,15 +114,21 @@
      * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
      * @returns {}
      */
-      var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
-  
-      var hamburgers = document.querySelectorAll(".hamburger");
-      if (hamburgers.length > 0) {
-        forEach(hamburgers, function(hamburger) {
-          hamburger.addEventListener("click", function() {
-            this.classList.toggle("is-active");
-          }, false);
+    var forEach = function (t, o, r) {
+        if ("[object Object]" === Object.prototype.toString.call(t))
+            for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t);
+        else
+            for (var e = 0, l = t.length; l > e; e++) o.call(r, t[e], e, t)
+    };
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+        forEach(hamburgers, function (hamburger) {
+            hamburger.addEventListener("click", function () {
+                this.classList.toggle("is-active");
+            }, false);
         });
-      }
-    </script>
+    }
+</script>
+
 </html>
