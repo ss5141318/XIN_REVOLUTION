@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(./sass/css/hamburgers.css);
+@import url(../sass/css/hamburgers.css);
 @import url(../sass/css/style.css);
 html {
   overflow-y: scroll;
